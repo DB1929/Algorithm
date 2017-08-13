@@ -1,0 +1,7595 @@
+#1
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1000.000000
+    Proximal = 1000.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.602094 0.136475 0.110684
+ 0.119017 0.126781
+xxx
+Testing error = 
+10.79688610.79688610.796886
+10.79688610.796886
+xxx
+min_testing_err = 10.796886
+max_testing_err = 10.796886
+avg_testing_err = 10.796886
+std_testing_err = 0.000000
+#### end ##################
+#1
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#2
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1000.000000
+    Proximal = 1000.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.380399 0.720081 0.231176
+ 0.063968 0.117080
+xxx
+Testing error = 
+10.79688610.79688610.796886
+10.79688610.796886
+xxx
+min_testing_err = 10.796886
+max_testing_err = 10.796886
+avg_testing_err = 10.796886
+std_testing_err = 0.000000
+#### end ##################
+#2
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#3
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1000.000000
+    Proximal = 1000.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.414606 0.147239 0.156490
+ 0.080963 0.079359
+xxx
+Testing error = 
+10.79688610.79688610.796886
+10.79688610.796886
+xxx
+min_testing_err = 10.796886
+max_testing_err = 10.796886
+avg_testing_err = 10.796886
+std_testing_err = 0.000000
+#### end ##################
+#3
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#4
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1000.000000
+    Proximal = 1000.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.195219 0.100577 0.080743
+ 0.074029 0.136944
+xxx
+Testing error = 
+20.98713110.79688610.808038
+10.79688610.796886
+xxx
+min_testing_err = 10.796886
+max_testing_err = 20.987131
+avg_testing_err = 12.837166
+std_testing_err = 4.555972
+#### end ##################
+#4
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#5
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1000.000000
+    Proximal = 1000.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.187112 0.155182 0.123119
+ 0.216070 0.123095
+xxx
+Testing error = 
+10.79688610.79688611.802752
+10.83480210.834802
+xxx
+min_testing_err = 10.796886
+max_testing_err = 11.802752
+avg_testing_err = 11.013226
+std_testing_err = 0.441766
+#### end ##################
+#5
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#6
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1000.000000
+    Proximal = 100.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.906747 0.233930 0.067594
+ 0.184302 0.226865
+xxx
+Testing error = 
+ 5.361643 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 5.361643
+avg_testing_err = 3.456074
+std_testing_err = 1.065245
+#### end ##################
+#6
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#7
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1000.000000
+    Proximal = 100.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.153793 0.109683 0.116572
+ 0.080177 0.070606
+xxx
+Testing error = 
+16.68265010.796886 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 16.682650
+avg_testing_err = 7.283717
+std_testing_err = 6.250129
+#### end ##################
+#7
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#8
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1000.000000
+    Proximal = 100.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.122056 0.098528 0.054877
+ 0.075646 0.054226
+xxx
+Testing error = 
+26.19265311.08682612.193055
+10.83480210.796886
+xxx
+min_testing_err = 10.796886
+max_testing_err = 26.192653
+avg_testing_err = 14.220844
+std_testing_err = 6.716528
+#### end ##################
+#8
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#9
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1000.000000
+    Proximal = 100.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.120059 0.064639 0.106370
+ 0.054468 0.059472
+xxx
+Testing error = 
+14.479113 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 14.479113
+avg_testing_err = 5.279568
+std_testing_err = 5.142702
+#### end ##################
+#9
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#10
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1000.000000
+    Proximal = 100.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.086977 0.082236 0.064931
+ 0.059194 0.048815
+xxx
+Testing error = 
+ 8.361398 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 8.361398
+avg_testing_err = 4.056025
+std_testing_err = 2.406777
+#### end ##################
+#10
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#11
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1000.000000
+    Proximal = 10.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.068211 0.051031 0.047333
+ 0.058166 0.049357
+xxx
+Testing error = 
+13.760956 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 13.760956
+avg_testing_err = 5.135937
+std_testing_err = 4.821532
+#### end ##################
+#11
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#12
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1000.000000
+    Proximal = 10.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.122204 0.096475 0.083675
+ 0.041656 0.041337
+xxx
+Testing error = 
+ 9.320427 2.979682 2.979682
+ 2.97968210.796886
+xxx
+min_testing_err = 2.979682
+max_testing_err = 10.796886
+avg_testing_err = 5.811272
+std_testing_err = 3.912296
+#### end ##################
+#12
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#13
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1000.000000
+    Proximal = 10.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.065636 0.059821 0.043073
+ 0.043524 0.042009
+xxx
+Testing error = 
+ 6.470103 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 6.470103
+avg_testing_err = 3.677766
+std_testing_err = 1.560964
+#### end ##################
+#13
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#14
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1000.000000
+    Proximal = 10.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.062389 0.049709 0.041003
+ 0.040119 0.041476
+xxx
+Testing error = 
+ 6.055267 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 6.055267
+avg_testing_err = 3.594799
+std_testing_err = 1.375443
+#### end ##################
+#14
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#15
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1000.000000
+    Proximal = 10.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.099870 0.082463 0.053708
+ 0.061668 0.055590
+xxx
+Testing error = 
+21.03173710.79688610.796886
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 21.031737
+avg_testing_err = 9.716975
+std_testing_err = 7.435363
+#### end ##################
+#15
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#16
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1000.000000
+    Proximal = 1.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.075617 0.059668 0.044373
+ 0.041632 0.039558
+xxx
+Testing error = 
+ 2.926155 3.396748 3.180409
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.926155
+max_testing_err = 3.396748
+avg_testing_err = 3.092535
+std_testing_err = 0.195845
+#### end ##################
+#16
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#17
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1000.000000
+    Proximal = 1.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.088945 0.065976 0.063452
+ 0.046921 0.042459
+xxx
+Testing error = 
+ 2.935076 2.990833 2.979682
+ 2.97968210.796886
+xxx
+min_testing_err = 2.935076
+max_testing_err = 10.796886
+avg_testing_err = 4.536432
+std_testing_err = 3.499766
+#### end ##################
+#17
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#18
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1000.000000
+    Proximal = 1.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.081806 0.084229 0.044213
+ 0.042169 0.045732
+xxx
+Testing error = 
+ 2.850325 3.193791 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.850325
+max_testing_err = 3.193791
+avg_testing_err = 2.996632
+std_testing_err = 0.123632
+#### end ##################
+#18
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#19
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1000.000000
+    Proximal = 1.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.082609 0.069253 0.062262
+ 0.054068 0.167122
+xxx
+Testing error = 
+ 2.845864 3.25847011.432522
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.845864
+max_testing_err = 11.432522
+avg_testing_err = 4.699244
+std_testing_err = 3.767017
+#### end ##################
+#19
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#20
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1000.000000
+    Proximal = 1.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.066991 0.047006 0.050703
+ 0.052946 0.046519
+xxx
+Testing error = 
+ 3.071124 3.291924 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 3.291924
+avg_testing_err = 3.060419
+std_testing_err = 0.135337
+#### end ##################
+#20
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#21
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1000.000000
+    Proximal = 0.100000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.076334 0.064906 0.073476
+ 0.062286 0.060802
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#21
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#22
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1000.000000
+    Proximal = 0.100000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.111138 0.102219 0.092302
+ 0.092848 0.070294
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#22
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#23
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1000.000000
+    Proximal = 0.100000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.099420 0.092765 0.089753
+ 0.103959 0.063676
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#23
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#24
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1000.000000
+    Proximal = 0.100000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.134649 0.087005 0.074222
+ 0.078405 0.100110
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#24
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#25
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1000.000000
+    Proximal = 0.100000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.068785 0.065410 0.135508
+ 0.149375 0.095679
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#25
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#26
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1000.000000
+    Proximal = 0.010000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.062768 0.059515 0.071059
+ 0.062355 0.062214
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#26
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#27
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1000.000000
+    Proximal = 0.010000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.066551 0.062498 0.057105
+ 0.070811 0.061195
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#27
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#28
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1000.000000
+    Proximal = 0.010000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.075587 0.071414 0.057915
+ 0.053790 0.054387
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#28
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#29
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1000.000000
+    Proximal = 0.010000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.111115 0.096634 0.067647
+ 0.083854 0.101282
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#29
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#30
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1000.000000
+    Proximal = 0.010000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.075961 0.068455 0.062738
+ 0.058204 0.059130
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#30
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#31
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1000.000000
+    Proximal = 0.001000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.065770 0.064905 0.056365
+ 0.056829 0.060277
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#31
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#32
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1000.000000
+    Proximal = 0.001000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.116223 0.093907 0.075932
+ 0.077982 0.080601
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#32
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#33
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1000.000000
+    Proximal = 0.001000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.115000 0.132797 0.102682
+ 0.071663 0.083198
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#33
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#34
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1000.000000
+    Proximal = 0.001000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.094730 0.063711 0.060121
+ 0.052847 0.056215
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#34
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#35
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1000.000000
+    Proximal = 0.001000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.078149 0.151724 0.117858
+ 0.173218 0.171237
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#35
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#36
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 100.000000
+    Proximal = 1000.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.091602 0.084452 0.049240
+ 0.063249 0.070011
+xxx
+Testing error = 
+11.24517710.79688615.815063
+10.79688621.201240
+xxx
+min_testing_err = 10.796886
+max_testing_err = 21.201240
+avg_testing_err = 13.971051
+std_testing_err = 4.562265
+#### end ##################
+#36
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#37
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 100.000000
+    Proximal = 1000.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.123191 0.061409 0.043345
+ 0.044755 0.044617
+xxx
+Testing error = 
+14.34529510.79688612.425006
+10.79688611.254098
+xxx
+min_testing_err = 10.796886
+max_testing_err = 14.345295
+avg_testing_err = 11.923634
+std_testing_err = 1.508577
+#### end ##################
+#37
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#38
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 100.000000
+    Proximal = 1000.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.053829 0.061131 0.053095
+ 0.049381 0.052932
+xxx
+Testing error = 
+10.79688611.01991710.796886
+11.99009710.796886
+xxx
+min_testing_err = 10.796886
+max_testing_err = 11.990097
+avg_testing_err = 11.080135
+std_testing_err = 0.517771
+#### end ##################
+#38
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#39
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 100.000000
+    Proximal = 1000.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.058591 0.079986 0.083193
+ 0.056393 0.058570
+xxx
+Testing error = 
+10.79688611.95664310.796886
+10.79688610.796886
+xxx
+min_testing_err = 10.796886
+max_testing_err = 11.956643
+avg_testing_err = 11.028838
+std_testing_err = 0.518659
+#### end ##################
+#39
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#40
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 100.000000
+    Proximal = 1000.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.070489 0.061012 0.055517
+ 0.047198 0.073216
+xxx
+Testing error = 
+19.36347210.79688610.796886
+10.84595318.313000
+xxx
+min_testing_err = 10.796886
+max_testing_err = 19.363472
+avg_testing_err = 14.023240
+std_testing_err = 4.411179
+#### end ##################
+#40
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#41
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 100.000000
+    Proximal = 100.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.080903 0.052686 0.039137
+ 0.037654 0.038502
+xxx
+Testing error = 
+10.79688610.79688610.796886
+10.79688610.796886
+xxx
+min_testing_err = 10.796886
+max_testing_err = 10.796886
+avg_testing_err = 10.796886
+std_testing_err = 0.000000
+#### end ##################
+#41
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#42
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 100.000000
+    Proximal = 100.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.060901 0.056462 0.054226
+ 0.053828 0.069869
+xxx
+Testing error = 
+10.79688610.79688610.863796
+10.79688610.834802
+xxx
+min_testing_err = 10.796886
+max_testing_err = 10.863796
+avg_testing_err = 10.817851
+std_testing_err = 0.030483
+#### end ##################
+#42
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#43
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 100.000000
+    Proximal = 100.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.049601 0.046444 0.047203
+ 0.040446 0.045351
+xxx
+Testing error = 
+10.83480210.79688616.189754
+10.79688615.837366
+xxx
+min_testing_err = 10.796886
+max_testing_err = 16.189754
+avg_testing_err = 12.891139
+std_testing_err = 2.853131
+#### end ##################
+#43
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#44
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 100.000000
+    Proximal = 100.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.048537 0.054156 0.037388
+ 0.060019 0.037803
+xxx
+Testing error = 
+12.14398810.79688622.216027
+10.79688610.796886
+xxx
+min_testing_err = 10.796886
+max_testing_err = 22.216027
+avg_testing_err = 13.350135
+std_testing_err = 4.990392
+#### end ##################
+#44
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#45
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 100.000000
+    Proximal = 100.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.045728 0.043797 0.038050
+ 0.036785 0.039064
+xxx
+Testing error = 
+10.79688610.80803810.796886
+12.23097010.796886
+xxx
+min_testing_err = 10.796886
+max_testing_err = 12.230970
+avg_testing_err = 11.085933
+std_testing_err = 0.640113
+#### end ##################
+#45
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#46
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 100.000000
+    Proximal = 10.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.069110 0.060778 0.059259
+ 0.062168 0.061872
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#46
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#47
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 100.000000
+    Proximal = 10.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.062499 0.062692 0.045648
+ 0.050917 0.055106
+xxx
+Testing error = 
+ 2.979682 2.97968213.714120
+ 2.97968212.924594
+xxx
+min_testing_err = 2.979682
+max_testing_err = 13.714120
+avg_testing_err = 7.115552
+std_testing_err = 5.670148
+#### end ##################
+#47
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#48
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 100.000000
+    Proximal = 10.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.058862 0.055314 0.051286
+ 0.040386 0.041881
+xxx
+Testing error = 
+ 2.979682 3.008676 2.979682
+11.428062 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 11.428062
+avg_testing_err = 4.675157
+std_testing_err = 3.775010
+#### end ##################
+#48
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#49
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 100.000000
+    Proximal = 10.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.054232 0.049821 0.046630
+ 0.045455 0.043550
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 3.022058 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 3.022058
+avg_testing_err = 2.988157
+std_testing_err = 0.018951
+#### end ##################
+#49
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#50
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 100.000000
+    Proximal = 10.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.050755 0.048942 0.037153
+ 0.036997 0.039061
+xxx
+Testing error = 
+ 3.31645715.926578 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 15.926578
+avg_testing_err = 5.636416
+std_testing_err = 5.754224
+#### end ##################
+#50
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#51
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 100.000000
+    Proximal = 1.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.054441 0.048630 0.041622
+ 0.041486 0.038998
+xxx
+Testing error = 
+12.264424 2.97968211.347771
+ 2.979682 2.981912
+xxx
+min_testing_err = 2.979682
+max_testing_err = 12.264424
+avg_testing_err = 6.510694
+std_testing_err = 4.844871
+#### end ##################
+#51
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#52
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 100.000000
+    Proximal = 1.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.066047 0.061592 0.055854
+ 0.098341 0.063022
+xxx
+Testing error = 
+ 2.979682 2.979682 4.010081
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 4.010081
+avg_testing_err = 3.185762
+std_testing_err = 0.460808
+#### end ##################
+#52
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#53
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 100.000000
+    Proximal = 1.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.080313 0.063732 0.054896
+ 0.046620 0.048098
+xxx
+Testing error = 
+ 2.979682 2.97968224.272364
+21.682985 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 24.272364
+avg_testing_err = 10.978879
+std_testing_err = 10.991543
+#### end ##################
+#53
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#54
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 100.000000
+    Proximal = 1.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.056914 0.054783 0.038880
+ 0.042741 0.042904
+xxx
+Testing error = 
+ 2.966300 3.051052 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.966300
+max_testing_err = 3.051052
+avg_testing_err = 2.991280
+std_testing_err = 0.033912
+#### end ##################
+#54
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#55
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 100.000000
+    Proximal = 1.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.043766 0.040394 0.045843
+ 0.046469 0.042830
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.981912
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.981912
+avg_testing_err = 2.980128
+std_testing_err = 0.000997
+#### end ##################
+#55
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#56
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 100.000000
+    Proximal = 0.100000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.056094 0.051542 0.051248
+ 0.058722 0.070764
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#56
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#57
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 100.000000
+    Proximal = 0.100000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.059108 0.057219 0.062120
+ 0.061528 0.070925
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#57
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#58
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 100.000000
+    Proximal = 0.100000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.060633 0.085396 0.061720
+ 0.063733 0.088500
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#58
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#59
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 100.000000
+    Proximal = 0.100000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.085888 0.060239 0.056175
+ 0.053431 0.052506
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#59
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#60
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 100.000000
+    Proximal = 0.100000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.076153 0.081440 0.065734
+ 0.065823 0.056441
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#60
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#61
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 100.000000
+    Proximal = 0.010000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.078238 0.078193 0.064457
+ 0.088687 0.056523
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#61
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#62
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 100.000000
+    Proximal = 0.010000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.056065 0.078122 0.068645
+ 0.066800 0.050567
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#62
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#63
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 100.000000
+    Proximal = 0.010000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.079057 0.072860 0.059654
+ 0.070204 0.065741
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#63
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#64
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 100.000000
+    Proximal = 0.010000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.061401 0.059374 0.054041
+ 0.061735 0.078233
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#64
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#65
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 100.000000
+    Proximal = 0.010000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.056805 0.056320 0.050781
+ 0.050848 0.050943
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#65
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#66
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 100.000000
+    Proximal = 0.001000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.104524 0.138753 0.089862
+ 0.106719 0.087970
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#66
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#67
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 100.000000
+    Proximal = 0.001000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.077273 0.070724 0.092911
+ 0.063595 0.064245
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#67
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#68
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 100.000000
+    Proximal = 0.001000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.083324 0.076173 0.095055
+ 0.113811 0.089179
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#68
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#69
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 100.000000
+    Proximal = 0.001000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.058824 0.054619 0.054478
+ 0.053831 0.052465
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#69
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#70
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 100.000000
+    Proximal = 0.001000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.097427 0.077352 0.068336
+ 0.070824 0.055976
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#70
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#71
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 10.000000
+    Proximal = 1000.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.174913 0.069341 0.046192
+ 0.039339 0.043393
+xxx
+Testing error = 
+10.83480210.83257111.080135
+10.79688610.796886
+xxx
+min_testing_err = 10.796886
+max_testing_err = 11.080135
+avg_testing_err = 10.868256
+std_testing_err = 0.119867
+#### end ##################
+#71
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#72
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 10.000000
+    Proximal = 1000.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.060040 0.062006 0.042968
+ 0.045391 0.044117
+xxx
+Testing error = 
+10.83480211.68454612.168522
+10.79688623.344559
+xxx
+min_testing_err = 10.796886
+max_testing_err = 23.344559
+avg_testing_err = 13.765863
+std_testing_err = 5.386110
+#### end ##################
+#72
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#73
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 10.000000
+    Proximal = 1000.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.065519 0.095244 0.069843
+ 0.056274 0.047349
+xxx
+Testing error = 
+10.79688619.02892710.796886
+10.79688610.796886
+xxx
+min_testing_err = 10.796886
+max_testing_err = 19.028927
+avg_testing_err = 12.443295
+std_testing_err = 3.681480
+#### end ##################
+#73
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#74
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 10.000000
+    Proximal = 1000.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.065399 0.109598 0.069290
+ 0.089404 0.063064
+xxx
+Testing error = 
+10.79688610.79688610.796886
+16.92352310.843723
+xxx
+min_testing_err = 10.796886
+max_testing_err = 16.923523
+avg_testing_err = 12.031581
+std_testing_err = 2.734754
+#### end ##################
+#74
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#75
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 10.000000
+    Proximal = 1000.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.047274 0.046986 0.041799
+ 0.043164 0.043416
+xxx
+Testing error = 
+10.79688610.796886 2.979682
+21.04734911.555189
+xxx
+min_testing_err = 2.979682
+max_testing_err = 21.047349
+avg_testing_err = 11.435199
+std_testing_err = 6.417135
+#### end ##################
+#75
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#76
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 10.000000
+    Proximal = 100.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.063161 0.051702 0.052109
+ 0.066177 0.047971
+xxx
+Testing error = 
+13.05395110.83480210.834802
+10.83480210.808038
+xxx
+min_testing_err = 10.808038
+max_testing_err = 13.053951
+avg_testing_err = 11.273279
+std_testing_err = 0.995493
+#### end ##################
+#76
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#77
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 10.000000
+    Proximal = 100.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.056551 0.060899 0.045283
+ 0.046322 0.044086
+xxx
+Testing error = 
+15.84628811.31877710.834802
+10.80803810.796886
+xxx
+min_testing_err = 10.796886
+max_testing_err = 15.846288
+avg_testing_err = 11.920958
+std_testing_err = 2.205261
+#### end ##################
+#77
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#78
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 10.000000
+    Proximal = 100.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.053974 0.059992 0.046053
+ 0.047209 0.046694
+xxx
+Testing error = 
+10.79688610.79688610.834802
+12.32687311.352231
+xxx
+min_testing_err = 10.796886
+max_testing_err = 12.326873
+avg_testing_err = 11.221536
+std_testing_err = 0.661262
+#### end ##################
+#78
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#79
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 10.000000
+    Proximal = 100.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.049836 0.060854 0.045697
+ 0.042085 0.039456
+xxx
+Testing error = 
+26.85505310.83480210.834802
+10.79688610.796886
+xxx
+min_testing_err = 10.796886
+max_testing_err = 26.855053
+avg_testing_err = 14.023686
+std_testing_err = 7.172977
+#### end ##################
+#79
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#80
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 10.000000
+    Proximal = 100.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.047753 0.051180 0.044543
+ 0.050457 0.051578
+xxx
+Testing error = 
+10.79688610.82365010.796886
+10.79688610.834802
+xxx
+min_testing_err = 10.796886
+max_testing_err = 10.834802
+avg_testing_err = 10.809822
+std_testing_err = 0.018146
+#### end ##################
+#80
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#81
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 10.000000
+    Proximal = 10.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.052952 0.053166 0.043551
+ 0.043803 0.042979
+xxx
+Testing error = 
+10.82365010.79688610.796886
+11.08682610.796886
+xxx
+min_testing_err = 10.796886
+max_testing_err = 11.086826
+avg_testing_err = 10.860227
+std_testing_err = 0.127201
+#### end ##################
+#81
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#82
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 10.000000
+    Proximal = 10.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.052951 0.049912 0.040548
+ 0.039436 0.041217
+xxx
+Testing error = 
+10.84595320.96705810.845953
+10.79688611.664474
+xxx
+min_testing_err = 10.796886
+max_testing_err = 20.967058
+avg_testing_err = 13.024065
+std_testing_err = 4.455006
+#### end ##################
+#82
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#83
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 10.000000
+    Proximal = 10.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.046751 0.048609 0.048358
+ 0.047697 0.085913
+xxx
+Testing error = 
+10.79688610.83480210.796886
+23.63449820.576756
+xxx
+min_testing_err = 10.796886
+max_testing_err = 23.634498
+avg_testing_err = 15.327966
+std_testing_err = 6.280887
+#### end ##################
+#83
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#84
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 10.000000
+    Proximal = 10.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.067224 0.057661 0.046694
+ 0.047869 0.050330
+xxx
+Testing error = 
+13.42418110.79688612.454000
+10.79688611.347771
+xxx
+min_testing_err = 10.796886
+max_testing_err = 13.424181
+avg_testing_err = 11.763945
+std_testing_err = 1.148495
+#### end ##################
+#84
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#85
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 10.000000
+    Proximal = 10.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.056360 0.055524 0.049133
+ 0.044612 0.050076
+xxx
+Testing error = 
+10.79688610.79688610.796886
+10.79688610.796886
+xxx
+min_testing_err = 10.796886
+max_testing_err = 10.796886
+avg_testing_err = 10.796886
+std_testing_err = 0.000000
+#### end ##################
+#85
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#86
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 10.000000
+    Proximal = 1.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.046826 0.063060 0.066775
+ 0.043516 0.040713
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.97968212.210897
+xxx
+min_testing_err = 2.979682
+max_testing_err = 12.210897
+avg_testing_err = 4.825925
+std_testing_err = 4.128325
+#### end ##################
+#86
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#87
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 10.000000
+    Proximal = 1.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.052326 0.060399 0.046066
+ 0.047877 0.143232
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+21.881482 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 21.881482
+avg_testing_err = 6.760042
+std_testing_err = 8.453142
+#### end ##################
+#87
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#88
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 10.000000
+    Proximal = 1.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.047641 0.050178 0.054657
+ 0.048800 0.049273
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#88
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#89
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 10.000000
+    Proximal = 1.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.053515 0.057862 0.042582
+ 0.043594 0.043459
+xxx
+Testing error = 
+ 2.990833 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.990833
+avg_testing_err = 2.981912
+std_testing_err = 0.004987
+#### end ##################
+#89
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#90
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 10.000000
+    Proximal = 1.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.071793 0.090107 0.062874
+ 0.054319 0.047312
+xxx
+Testing error = 
+ 2.979682 2.97968235.145081
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 35.145081
+avg_testing_err = 9.412762
+std_testing_err = 14.384804
+#### end ##################
+#90
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#91
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 10.000000
+    Proximal = 0.100000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.083997 0.078845 0.066257
+ 0.065218 0.072526
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#91
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#92
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 10.000000
+    Proximal = 0.100000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.062199 0.066122 0.047395
+ 0.048943 0.045697
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+17.525704 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 17.525704
+avg_testing_err = 5.888886
+std_testing_err = 6.505179
+#### end ##################
+#92
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#93
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 10.000000
+    Proximal = 0.100000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.048533 0.061575 0.044588
+ 0.045568 0.076537
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.964070 2.979682
+xxx
+min_testing_err = 2.964070
+max_testing_err = 2.979682
+avg_testing_err = 2.976560
+std_testing_err = 0.006982
+#### end ##################
+#93
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#94
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 10.000000
+    Proximal = 0.100000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.083140 0.109979 0.086217
+ 0.088378 0.060802
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 3.042130
+xxx
+min_testing_err = 2.979682
+max_testing_err = 3.042130
+avg_testing_err = 2.992172
+std_testing_err = 0.027928
+#### end ##################
+#94
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#95
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 10.000000
+    Proximal = 0.100000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.062749 0.083459 0.064111
+ 0.070034 0.084817
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#95
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#96
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 10.000000
+    Proximal = 0.010000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.100020 0.104579 0.063013
+ 0.069520 0.063487
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#96
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#97
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 10.000000
+    Proximal = 0.010000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.066188 0.084543 0.054278
+ 0.051409 0.051982
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#97
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#98
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 10.000000
+    Proximal = 0.010000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.068877 0.074684 0.055185
+ 0.050823 0.069580
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#98
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#99
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 10.000000
+    Proximal = 0.010000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.144705 0.100030 0.087971
+ 0.095103 0.083492
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#99
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#100
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 10.000000
+    Proximal = 0.010000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.108227 0.254008 0.210436
+ 0.157569 0.071294
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#100
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#101
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 10.000000
+    Proximal = 0.001000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.069418 0.069695 0.059485
+ 0.051685 0.056217
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#101
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#102
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 10.000000
+    Proximal = 0.001000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.060596 0.112361 0.052337
+ 0.052598 0.052373
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#102
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#103
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 10.000000
+    Proximal = 0.001000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.064024 0.092433 0.064076
+ 0.060197 0.058506
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#103
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#104
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 10.000000
+    Proximal = 0.001000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.058666 0.052055 0.048896
+ 0.048476 0.046731
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#104
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#105
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 10.000000
+    Proximal = 0.001000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.053594 0.048904 0.047617
+ 0.047228 0.048351
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#105
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#106
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1.000000
+    Proximal = 1000.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.048771 0.072289 0.044026
+ 0.040461 0.047258
+xxx
+Testing error = 
+26.40676212.195285 2.979682
+10.83480210.796886
+xxx
+min_testing_err = 2.979682
+max_testing_err = 26.406762
+avg_testing_err = 12.642683
+std_testing_err = 8.510274
+#### end ##################
+#106
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#107
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1.000000
+    Proximal = 1000.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.046598 0.053549 0.046346
+ 0.049821 0.048653
+xxx
+Testing error = 
+16.99266210.83480215.801682
+13.919308 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 16.992662
+avg_testing_err = 12.105627
+std_testing_err = 5.606497
+#### end ##################
+#107
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#108
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1.000000
+    Proximal = 1000.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.050712 0.044199 0.040872
+ 0.042435 0.043384
+xxx
+Testing error = 
+ 2.979682 2.97968220.989361
+10.796886 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 20.989361
+avg_testing_err = 8.145059
+std_testing_err = 7.938067
+#### end ##################
+#108
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#109
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1.000000
+    Proximal = 1000.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.045053 0.052482 0.038847
+ 0.041243 0.046902
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+10.83480227.905524
+xxx
+min_testing_err = 2.979682
+max_testing_err = 27.905524
+avg_testing_err = 9.535874
+std_testing_err = 10.817604
+#### end ##################
+#109
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#110
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1.000000
+    Proximal = 1000.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.056484 0.075946 0.050176
+ 0.058949 0.064724
+xxx
+Testing error = 
+38.530678 2.97968210.796886
+39.808640 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 39.808640
+avg_testing_err = 19.019114
+std_testing_err = 18.675099
+#### end ##################
+#110
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#111
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1.000000
+    Proximal = 100.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.067808 0.090341 0.051771
+ 0.056218 0.048483
+xxx
+Testing error = 
+15.82398515.45375510.796886
+11.80275210.796886
+xxx
+min_testing_err = 10.796886
+max_testing_err = 15.823985
+avg_testing_err = 12.934853
+std_testing_err = 2.505763
+#### end ##################
+#111
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#112
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1.000000
+    Proximal = 100.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.047620 0.046632 0.048228
+ 0.070875 0.043600
+xxx
+Testing error = 
+ 2.97968213.70073817.496710
+ 2.97968210.834802
+xxx
+min_testing_err = 2.979682
+max_testing_err = 17.496710
+avg_testing_err = 9.598323
+std_testing_err = 6.487604
+#### end ##################
+#112
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#113
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1.000000
+    Proximal = 100.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.051949 0.050861 0.049630
+ 0.050351 0.045403
+xxx
+Testing error = 
+10.796886 2.979682 2.979682
+10.79688610.796886
+xxx
+min_testing_err = 2.979682
+max_testing_err = 10.796886
+avg_testing_err = 7.670005
+std_testing_err = 4.281659
+#### end ##################
+#113
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#114
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1.000000
+    Proximal = 100.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.050619 0.052717 0.049494
+ 0.044729 0.050555
+xxx
+Testing error = 
+10.79688612.29341823.859759
+29.747753 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 29.747753
+avg_testing_err = 15.935500
+std_testing_err = 10.736568
+#### end ##################
+#114
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#115
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1.000000
+    Proximal = 100.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.050009 0.048239 0.045898
+ 0.048690 0.048146
+xxx
+Testing error = 
+10.79688615.85074815.799451
+12.19305510.796886
+xxx
+min_testing_err = 10.796886
+max_testing_err = 15.850748
+avg_testing_err = 13.087405
+std_testing_err = 2.563400
+#### end ##################
+#115
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#116
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1.000000
+    Proximal = 10.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.074462 0.053178 0.044854
+ 0.043678 0.040725
+xxx
+Testing error = 
+23.411468 2.979682 2.979682
+20.83547120.866695
+xxx
+min_testing_err = 2.979682
+max_testing_err = 23.411468
+avg_testing_err = 14.214600
+std_testing_err = 10.309164
+#### end ##################
+#116
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#117
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1.000000
+    Proximal = 10.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.045898 0.043233 0.042644
+ 0.041351 0.040628
+xxx
+Testing error = 
+17.556928 2.97968210.796886
+11.08682610.796886
+xxx
+min_testing_err = 2.979682
+max_testing_err = 17.556928
+avg_testing_err = 10.643442
+std_testing_err = 5.166556
+#### end ##################
+#117
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#118
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1.000000
+    Proximal = 10.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.045644 0.050210 0.044609
+ 0.042005 0.041687
+xxx
+Testing error = 
+ 2.97968215.779379 2.979682
+37.52035120.576756
+xxx
+min_testing_err = 2.979682
+max_testing_err = 37.520351
+avg_testing_err = 15.967170
+std_testing_err = 14.345495
+#### end ##################
+#118
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#119
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1.000000
+    Proximal = 10.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.049013 0.076061 0.048655
+ 0.046901 0.048808
+xxx
+Testing error = 
+10.796886 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 10.796886
+avg_testing_err = 4.543123
+std_testing_err = 3.495960
+#### end ##################
+#119
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#120
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1.000000
+    Proximal = 10.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.044403 0.065181 0.072887
+ 0.064778 0.044703
+xxx
+Testing error = 
+ 2.97968210.79688633.218101
+ 2.97968229.618396
+xxx
+min_testing_err = 2.979682
+max_testing_err = 33.218101
+avg_testing_err = 15.918549
+std_testing_err = 14.560394
+#### end ##################
+#120
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#121
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1.000000
+    Proximal = 1.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.061965 0.060255 0.049516
+ 0.050351 0.055029
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#121
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#122
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1.000000
+    Proximal = 1.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.050294 0.048978 0.047782
+ 0.044732 0.047272
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#122
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#123
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1.000000
+    Proximal = 1.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.045794 0.045559 0.044398
+ 0.046725 0.048012
+xxx
+Testing error = 
+10.796886 2.97968230.753619
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 30.753619
+avg_testing_err = 10.097910
+std_testing_err = 12.032813
+#### end ##################
+#123
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#124
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1.000000
+    Proximal = 1.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.050023 0.055017 0.045232
+ 0.046611 0.045524
+xxx
+Testing error = 
+ 2.97968240.37067611.526195
+ 2.97968216.662578
+xxx
+min_testing_err = 2.979682
+max_testing_err = 40.370676
+avg_testing_err = 14.903763
+std_testing_err = 15.390196
+#### end ##################
+#124
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#125
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1.000000
+    Proximal = 1.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.046459 0.042270 0.039378
+ 0.041142 0.042694
+xxx
+Testing error = 
+15.899815 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 15.899815
+avg_testing_err = 5.563709
+std_testing_err = 5.778059
+#### end ##################
+#125
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#126
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1.000000
+    Proximal = 0.100000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.053702 0.057688 0.047320
+ 0.060311 0.059544
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#126
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#127
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1.000000
+    Proximal = 0.100000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.070062 0.061542 0.058791
+ 0.066360 0.147262
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#127
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#128
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1.000000
+    Proximal = 0.100000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.087329 0.067713 0.049014
+ 0.046747 0.047247
+xxx
+Testing error = 
+46.294355 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 46.294355
+avg_testing_err = 11.642617
+std_testing_err = 19.370911
+#### end ##################
+#128
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#129
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1.000000
+    Proximal = 0.100000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.067657 0.057696 0.066016
+ 0.064865 0.052611
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#129
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#130
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1.000000
+    Proximal = 0.100000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.062916 0.072876 0.047959
+ 0.048839 0.046682
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#130
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#131
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1.000000
+    Proximal = 0.010000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.053365 0.060855 0.050312
+ 0.048543 0.049101
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#131
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#132
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1.000000
+    Proximal = 0.010000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.079911 0.057296 0.050839
+ 0.048552 0.050361
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#132
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#133
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1.000000
+    Proximal = 0.010000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.074107 0.063243 0.054448
+ 0.053710 0.053762
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#133
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#134
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1.000000
+    Proximal = 0.010000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.054950 0.055854 0.058014
+ 0.058895 0.054234
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#134
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#135
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1.000000
+    Proximal = 0.010000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.055366 0.074247 0.082335
+ 0.093817 0.053778
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#135
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#136
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1.000000
+    Proximal = 0.001000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.059007 0.060737 0.049386
+ 0.047925 0.053093
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#136
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#137
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1.000000
+    Proximal = 0.001000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.054744 0.055846 0.048533
+ 0.048604 0.070436
+xxx
+Testing error = 
+44.258090 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 44.258090
+avg_testing_err = 11.235364
+std_testing_err = 18.460265
+#### end ##################
+#137
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#138
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1.000000
+    Proximal = 0.001000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.052790 0.055741 0.049965
+ 0.049498 0.056887
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#138
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#139
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1.000000
+    Proximal = 0.001000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.065281 0.060005 0.050073
+ 0.054348 0.048251
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#139
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#140
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 1.000000
+    Proximal = 0.001000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.053792 0.055971 0.070779
+ 0.066583 0.060334
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#140
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#141
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.100000
+    Proximal = 1000.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.047295 0.066712 0.065556
+ 0.059020 0.060728
+xxx
+Testing error = 
+12.20420625.91832625.918326
+25.91832628.199924
+xxx
+min_testing_err = 12.204206
+max_testing_err = 28.199924
+avg_testing_err = 23.631822
+std_testing_err = 6.464176
+#### end ##################
+#141
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#142
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.100000
+    Proximal = 1000.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.054333 0.074034 0.060765
+ 0.061509 0.060461
+xxx
+Testing error = 
+13.91930826.54504126.533889
+26.53388926.069987
+xxx
+min_testing_err = 13.919308
+max_testing_err = 26.545041
+avg_testing_err = 23.920423
+std_testing_err = 5.594461
+#### end ##################
+#142
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#143
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.100000
+    Proximal = 1000.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.048601 0.066460 0.060946
+ 0.060298 0.059111
+xxx
+Testing error = 
+13.69627826.80152620.975980
+25.85587823.694716
+xxx
+min_testing_err = 13.696278
+max_testing_err = 26.801526
+avg_testing_err = 22.204875
+std_testing_err = 5.257972
+#### end ##################
+#143
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#144
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.100000
+    Proximal = 1000.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.065460 0.080602 0.063943
+ 0.063062 0.063120
+xxx
+Testing error = 
+12.10384320.93360424.696122
+23.70363823.520753
+xxx
+min_testing_err = 12.103843
+max_testing_err = 24.696122
+avg_testing_err = 20.991592
+std_testing_err = 5.159235
+#### end ##################
+#144
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#145
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.100000
+    Proximal = 1000.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.049491 0.067042 0.060703
+ 0.061611 0.063129
+xxx
+Testing error = 
+22.74237822.16919127.457234
+26.07221726.072217
+xxx
+min_testing_err = 22.169191
+max_testing_err = 27.457234
+avg_testing_err = 24.902647
+std_testing_err = 2.313020
+#### end ##################
+#145
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#146
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.100000
+    Proximal = 100.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.053871 0.070015 0.060468
+ 0.060412 0.058278
+xxx
+Testing error = 
+23.42485025.96516325.965163
+37.57610926.161429
+xxx
+min_testing_err = 23.424850
+max_testing_err = 37.576109
+avg_testing_err = 27.818543
+std_testing_err = 5.570698
+#### end ##################
+#146
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#147
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.100000
+    Proximal = 100.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.047681 0.074865 0.061604
+ 0.060476 0.061451
+xxx
+Testing error = 
+20.93806526.60748925.726521
+23.95789224.207686
+xxx
+min_testing_err = 20.938065
+max_testing_err = 26.607489
+avg_testing_err = 24.287530
+std_testing_err = 2.167191
+#### end ##################
+#147
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#148
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.100000
+    Proximal = 100.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.049391 0.071258 0.062314
+ 0.087117 0.061307
+xxx
+Testing error = 
+38.66003526.46028926.119053
+26.09229025.695296
+xxx
+min_testing_err = 25.695296
+max_testing_err = 38.660035
+avg_testing_err = 28.605393
+std_testing_err = 5.627245
+#### end ##################
+#148
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#149
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.100000
+    Proximal = 100.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.049556 0.073855 0.058417
+ 0.061660 0.068764
+xxx
+Testing error = 
+27.40147623.52967425.568169
+38.71356237.181346
+xxx
+min_testing_err = 23.529674
+max_testing_err = 38.713562
+avg_testing_err = 30.478846
+std_testing_err = 6.975134
+#### end ##################
+#149
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#150
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.100000
+    Proximal = 100.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.050644 0.062552 0.059726
+ 0.073723 0.080273
+xxx
+Testing error = 
+17.22238325.64176918.422285
+25.82242327.883221
+xxx
+min_testing_err = 17.222383
+max_testing_err = 27.883221
+avg_testing_err = 22.998416
+std_testing_err = 4.825121
+#### end ##################
+#150
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#151
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.100000
+    Proximal = 10.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.047947 0.073809 0.076050
+ 0.079033 0.065033
+xxx
+Testing error = 
+29.40651721.89263335.149542
+24.69389124.693891
+xxx
+min_testing_err = 21.892633
+max_testing_err = 35.149542
+avg_testing_err = 27.167295
+std_testing_err = 5.215072
+#### end ##################
+#151
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#152
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.100000
+    Proximal = 10.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.049930 0.063059 0.061211
+ 0.060618 0.060144
+xxx
+Testing error = 
+28.48317223.50068023.500680
+18.32861326.121284
+xxx
+min_testing_err = 18.328613
+max_testing_err = 28.483172
+avg_testing_err = 23.986886
+std_testing_err = 3.783553
+#### end ##################
+#152
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#153
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.100000
+    Proximal = 10.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.048306 0.063162 0.064966
+ 0.064056 0.060482
+xxx
+Testing error = 
+26.54950222.87842625.599393
+25.96739325.967393
+xxx
+min_testing_err = 22.878426
+max_testing_err = 26.549502
+avg_testing_err = 25.392421
+std_testing_err = 1.445945
+#### end ##################
+#153
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#154
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.100000
+    Proximal = 10.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.048435 0.059940 0.060460
+ 0.060136 0.061223
+xxx
+Testing error = 
+10.83480227.15614326.640944
+26.58964726.589647
+xxx
+min_testing_err = 10.834802
+max_testing_err = 27.156143
+avg_testing_err = 23.562237
+std_testing_err = 7.118859
+#### end ##################
+#154
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#155
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.100000
+    Proximal = 10.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.096366 0.124746 0.098276
+ 0.088477 0.091850
+xxx
+Testing error = 
+ 2.97968225.85810832.535629
+22.39668120.625822
+xxx
+min_testing_err = 2.979682
+max_testing_err = 32.535629
+avg_testing_err = 20.879185
+std_testing_err = 10.993425
+#### end ##################
+#155
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#156
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.100000
+    Proximal = 1.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.048172 0.077581 0.071263
+ 0.078677 0.079078
+xxx
+Testing error = 
+18.41113423.04569923.045699
+23.93558934.357785
+xxx
+min_testing_err = 18.411134
+max_testing_err = 34.357785
+avg_testing_err = 24.559181
+std_testing_err = 5.890273
+#### end ##################
+#156
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#157
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.100000
+    Proximal = 1.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.049623 0.065746 0.062591
+ 0.060295 0.058651
+xxx
+Testing error = 
+32.20777522.18034229.317305
+16.11169322.541651
+xxx
+min_testing_err = 16.111693
+max_testing_err = 32.207775
+avg_testing_err = 24.471753
+std_testing_err = 6.367728
+#### end ##################
+#157
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#158
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.100000
+    Proximal = 1.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.048562 0.061723 0.062427
+ 0.059472 0.060492
+xxx
+Testing error = 
+15.45375522.94533522.945335
+23.52075336.320450
+xxx
+min_testing_err = 15.453755
+max_testing_err = 36.320450
+avg_testing_err = 24.237126
+std_testing_err = 7.533342
+#### end ##################
+#158
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#159
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.100000
+    Proximal = 1.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.046887 0.175196 0.109803
+ 0.081935 0.069927
+xxx
+Testing error = 
+12.47853321.24807621.248076
+24.06271626.011999
+xxx
+min_testing_err = 12.478533
+max_testing_err = 26.011999
+avg_testing_err = 21.009880
+std_testing_err = 5.177798
+#### end ##################
+#159
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#160
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.100000
+    Proximal = 1.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.061642 0.079029 0.065093
+ 0.083003 0.065976
+xxx
+Testing error = 
+36.18217128.21107620.886768
+25.62838727.684725
+xxx
+min_testing_err = 20.886768
+max_testing_err = 36.182171
+avg_testing_err = 27.718625
+std_testing_err = 5.543434
+#### end ##################
+#160
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#161
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.100000
+    Proximal = 0.100000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.063775 0.072701 0.055454
+ 0.164940 0.105365
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#161
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#162
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.100000
+    Proximal = 0.100000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.092079 0.093819 0.091460
+ 0.075418 0.055960
+xxx
+Testing error = 
+ 2.97968223.670183 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 23.670183
+avg_testing_err = 7.117782
+std_testing_err = 9.253073
+#### end ##################
+#162
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#163
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.100000
+    Proximal = 0.100000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.209628 0.142621 0.159346
+ 0.154414 0.090787
+xxx
+Testing error = 
+16.680420 2.97968210.796886
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 16.680420
+avg_testing_err = 7.283271
+std_testing_err = 6.249291
+#### end ##################
+#163
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#164
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.100000
+    Proximal = 0.100000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.100808 0.079770 0.063592
+ 0.073528 0.062347
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#164
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#165
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.100000
+    Proximal = 0.100000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.061869 0.079769 0.060080
+ 0.058416 0.069337
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#165
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#166
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.100000
+    Proximal = 0.010000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.063342 0.060493 0.050770
+ 0.050888 0.051225
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#166
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#167
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.100000
+    Proximal = 0.010000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.059161 0.061883 0.055997
+ 0.051375 0.051738
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#167
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#168
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.100000
+    Proximal = 0.010000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.098906 0.065280 0.049698
+ 0.053654 0.051956
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#168
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#169
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.100000
+    Proximal = 0.010000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.082223 0.108532 0.079632
+ 0.084975 0.092962
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#169
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#170
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.100000
+    Proximal = 0.010000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.056764 0.053486 0.050175
+ 0.052634 0.062066
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#170
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#171
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.100000
+    Proximal = 0.001000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.084303 0.063662 0.082766
+ 0.082161 0.068991
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#171
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#172
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.100000
+    Proximal = 0.001000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.059589 0.084822 0.075998
+ 0.089914 0.051541
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#172
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#173
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.100000
+    Proximal = 0.001000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.061056 0.054142 0.050225
+ 0.051991 0.050311
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#173
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#174
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.100000
+    Proximal = 0.001000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.077123 0.094450 0.068986
+ 0.075501 0.069739
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#174
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#175
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.100000
+    Proximal = 0.001000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.056944 0.054237 0.056432
+ 0.052071 0.050857
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#175
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#176
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.010000
+    Proximal = 1000.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.057604 0.086758 0.077485
+ 0.068357 0.067033
+xxx
+Testing error = 
+41.64863841.90735341.441220
+41.44122041.385463
+xxx
+min_testing_err = 41.385463
+max_testing_err = 41.907353
+avg_testing_err = 41.564779
+std_testing_err = 0.216262
+#### end ##################
+#176
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#177
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.010000
+    Proximal = 1000.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.048362 0.065204 0.064234
+ 0.063241 0.089060
+xxx
+Testing error = 
+39.03026541.36316041.363160
+41.36316041.363160
+xxx
+min_testing_err = 39.030265
+max_testing_err = 41.363160
+avg_testing_err = 40.896581
+std_testing_err = 1.043302
+#### end ##################
+#177
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#178
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.010000
+    Proximal = 1000.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.048205 0.068534 0.064204
+ 0.063074 0.078855
+xxx
+Testing error = 
+41.21819041.21819043.171934
+41.93411741.180275
+xxx
+min_testing_err = 41.180275
+max_testing_err = 43.171934
+avg_testing_err = 41.744541
+std_testing_err = 0.858178
+#### end ##################
+#178
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#179
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.010000
+    Proximal = 1000.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.047990 0.082063 0.064158
+ 0.064610 0.079755
+xxx
+Testing error = 
+40.99293041.49474844.724223
+41.62410541.617414
+xxx
+min_testing_err = 40.992930
+max_testing_err = 44.724223
+avg_testing_err = 42.090684
+std_testing_err = 1.494775
+#### end ##################
+#179
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#180
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.010000
+    Proximal = 1000.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.049222 0.076146 0.061106
+ 0.064335 0.063059
+xxx
+Testing error = 
+41.12005741.12005741.120057
+41.18919641.189196
+xxx
+min_testing_err = 41.120057
+max_testing_err = 41.189196
+avg_testing_err = 41.147713
+std_testing_err = 0.037869
+#### end ##################
+#180
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#181
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.010000
+    Proximal = 100.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.047627 0.068760 0.061541
+ 0.063065 0.083926
+xxx
+Testing error = 
+42.20844441.90289341.575038
+41.57503841.575038
+xxx
+min_testing_err = 41.575038
+max_testing_err = 42.208444
+avg_testing_err = 41.767290
+std_testing_err = 0.284555
+#### end ##################
+#181
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#182
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.010000
+    Proximal = 100.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.048167 0.082017 0.065898
+ 0.061834 0.065838
+xxx
+Testing error = 
+39.93576740.25470042.195062
+41.38769339.545465
+xxx
+min_testing_err = 39.545465
+max_testing_err = 42.195062
+avg_testing_err = 40.663738
+std_testing_err = 1.097367
+#### end ##################
+#182
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#183
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.010000
+    Proximal = 100.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.046187 0.067657 0.069084
+ 0.068724 0.069320
+xxx
+Testing error = 
+42.56083141.66648141.525972
+42.60097741.249415
+xxx
+min_testing_err = 41.249415
+max_testing_err = 42.600977
+avg_testing_err = 41.920735
+std_testing_err = 0.621210
+#### end ##################
+#183
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#184
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.010000
+    Proximal = 100.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.057852 0.079343 0.061981
+ 0.066210 0.066344
+xxx
+Testing error = 
+39.76403440.17664041.276178
+41.27617841.276178
+xxx
+min_testing_err = 39.764034
+max_testing_err = 41.276178
+avg_testing_err = 40.753842
+std_testing_err = 0.729964
+#### end ##################
+#184
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#185
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.010000
+    Proximal = 100.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.055630 0.074568 0.061737
+ 0.065828 0.064877
+xxx
+Testing error = 
+38.57751441.49251741.492517
+41.49251741.492517
+xxx
+min_testing_err = 38.577514
+max_testing_err = 41.492517
+avg_testing_err = 40.909517
+std_testing_err = 1.303629
+#### end ##################
+#185
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#186
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.010000
+    Proximal = 10.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.047180 0.065463 0.062604
+ 0.063407 0.069138
+xxx
+Testing error = 
+42.67457741.79360841.278408
+41.27840841.880590
+xxx
+min_testing_err = 41.278408
+max_testing_err = 42.674577
+avg_testing_err = 41.781118
+std_testing_err = 0.573095
+#### end ##################
+#186
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#187
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.010000
+    Proximal = 10.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.067522 0.069510 0.061539
+ 0.063167 0.079616
+xxx
+Testing error = 
+38.54629044.53464841.624105
+41.62410541.519281
+xxx
+min_testing_err = 38.546290
+max_testing_err = 44.534648
+avg_testing_err = 41.569686
+std_testing_err = 2.117805
+#### end ##################
+#187
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#188
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.010000
+    Proximal = 10.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.085713 0.117627 0.091326
+ 0.095268 0.099759
+xxx
+Testing error = 
+41.70885741.12005743.158552
+42.24189841.503669
+xxx
+min_testing_err = 41.120057
+max_testing_err = 43.158552
+avg_testing_err = 41.946607
+std_testing_err = 0.789290
+#### end ##################
+#188
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#189
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.010000
+    Proximal = 10.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.047884 0.094274 0.082331
+ 0.066924 0.071703
+xxx
+Testing error = 
+39.53208340.17887041.483596
+42.60097741.218190
+xxx
+min_testing_err = 39.532083
+max_testing_err = 42.600977
+avg_testing_err = 41.002743
+std_testing_err = 1.190966
+#### end ##################
+#189
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#190
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.010000
+    Proximal = 10.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.047775 0.076307 0.065180
+ 0.064674 0.062594
+xxx
+Testing error = 
+42.36233542.44485639.935767
+41.13566941.189196
+xxx
+min_testing_err = 39.935767
+max_testing_err = 42.444856
+avg_testing_err = 41.413565
+std_testing_err = 1.033825
+#### end ##################
+#190
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#191
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.010000
+    Proximal = 1.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.059713 0.073439 0.079665
+ 0.072832 0.067287
+xxx
+Testing error = 
+39.05702941.88059039.833173
+39.74842240.990700
+xxx
+min_testing_err = 39.057029
+max_testing_err = 41.880590
+avg_testing_err = 40.301983
+std_testing_err = 1.122770
+#### end ##################
+#191
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#192
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.010000
+    Proximal = 1.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.061947 0.083882 0.062372
+ 0.063388 0.062365
+xxx
+Testing error = 
+38.97896841.07768141.149051
+38.84738141.902893
+xxx
+min_testing_err = 38.847381
+max_testing_err = 41.902893
+avg_testing_err = 40.391195
+std_testing_err = 1.388217
+#### end ##################
+#192
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#193
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.010000
+    Proximal = 1.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.049120 0.063837 0.063598
+ 0.079782 0.078553
+xxx
+Testing error = 
+42.03225041.81591141.189196
+39.39826539.906773
+xxx
+min_testing_err = 39.398265
+max_testing_err = 42.032250
+avg_testing_err = 40.868479
+std_testing_err = 1.166325
+#### end ##################
+#193
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#194
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.010000
+    Proximal = 1.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.048556 0.066069 0.058713
+ 0.064865 0.062256
+xxx
+Testing error = 
+37.89058139.79525841.050918
+44.82904741.001851
+xxx
+min_testing_err = 37.890581
+max_testing_err = 44.829047
+avg_testing_err = 40.913531
+std_testing_err = 2.537060
+#### end ##################
+#194
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#195
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.010000
+    Proximal = 1.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.075458 0.095114 0.064580
+ 0.068936 0.078420
+xxx
+Testing error = 
+38.91205943.99491539.759574
+40.29930642.701340
+xxx
+min_testing_err = 38.912059
+max_testing_err = 43.994915
+avg_testing_err = 41.133439
+std_testing_err = 2.130972
+#### end ##################
+#195
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#196
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.010000
+    Proximal = 0.100000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.067544 0.081220 0.061104
+ 0.059039 0.058120
+xxx
+Testing error = 
+32.14755737.23710331.864308
+29.71652936.601468
+xxx
+min_testing_err = 29.716529
+max_testing_err = 37.237103
+avg_testing_err = 33.513393
+std_testing_err = 3.255894
+#### end ##################
+#196
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#197
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.010000
+    Proximal = 0.100000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.057207 0.055147 0.046398
+ 0.048301 0.053284
+xxx
+Testing error = 
+34.79492435.99036536.133104
+31.39371539.844325
+xxx
+min_testing_err = 31.393715
+max_testing_err = 39.844325
+avg_testing_err = 35.631287
+std_testing_err = 3.032613
+#### end ##################
+#197
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#198
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.010000
+    Proximal = 0.100000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.067728 0.058249 0.047408
+ 0.047397 0.046365
+xxx
+Testing error = 
+33.68423433.68423433.684234
+33.68423431.728260
+xxx
+min_testing_err = 31.728260
+max_testing_err = 33.684234
+avg_testing_err = 33.293039
+std_testing_err = 0.874738
+#### end ##################
+#198
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#199
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.010000
+    Proximal = 0.100000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.055725 0.058698 0.052487
+ 0.047155 0.046890
+xxx
+Testing error = 
+41.04645739.06148933.862658
+33.86265833.862658
+xxx
+min_testing_err = 33.862658
+max_testing_err = 41.046457
+avg_testing_err = 36.339184
+std_testing_err = 3.462980
+#### end ##################
+#199
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#200
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.010000
+    Proximal = 0.100000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.057256 0.055966 0.049664
+ 0.052497 0.047812
+xxx
+Testing error = 
+35.04694841.00185136.184401
+31.78847837.404376
+xxx
+min_testing_err = 31.788478
+max_testing_err = 41.001851
+avg_testing_err = 36.285211
+std_testing_err = 3.363900
+#### end ##################
+#200
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#201
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.010000
+    Proximal = 0.010000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.055536 0.056572 0.048310
+ 0.048648 0.048272
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#201
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#202
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.010000
+    Proximal = 0.010000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.061837 0.073582 0.079277
+ 0.053588 0.052745
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#202
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#203
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.010000
+    Proximal = 0.010000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.057349 0.054079 0.050859
+ 0.052694 0.049582
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#203
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#204
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.010000
+    Proximal = 0.010000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.062915 0.077166 0.083586
+ 0.067327 0.057321
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#204
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#205
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.010000
+    Proximal = 0.010000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.060576 0.060424 0.053424
+ 0.053703 0.053411
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#205
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#206
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.010000
+    Proximal = 0.001000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.068736 0.077714 0.074073
+ 0.069046 0.072488
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#206
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#207
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.010000
+    Proximal = 0.001000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.060381 0.069386 0.054584
+ 0.058318 0.049837
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#207
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#208
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.010000
+    Proximal = 0.001000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.054164 0.051994 0.048578
+ 0.048968 0.047461
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#208
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#209
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.010000
+    Proximal = 0.001000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.060775 0.055493 0.050797
+ 0.049345 0.048218
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#209
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#210
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.010000
+    Proximal = 0.001000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.056023 0.057856 0.048707
+ 0.050141 0.049777
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#210
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#211
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.001000
+    Proximal = 1000.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.050124 0.071351 0.064303
+ 0.064167 0.063210
+xxx
+Testing error = 
+45.11229645.85944645.859446
+45.85721645.832683
+xxx
+min_testing_err = 45.112296
+max_testing_err = 45.859446
+avg_testing_err = 45.704217
+std_testing_err = 0.331087
+#### end ##################
+#211
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#212
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.001000
+    Proximal = 1000.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.051883 0.069989 0.066854
+ 0.064342 0.063837
+xxx
+Testing error = 
+44.72199345.81038045.027544
+45.82599245.799228
+xxx
+min_testing_err = 44.721993
+max_testing_err = 45.825992
+avg_testing_err = 45.437027
+std_testing_err = 0.524601
+#### end ##################
+#212
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#213
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.001000
+    Proximal = 1000.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.059414 0.085183 0.062795
+ 0.063217 0.062608
+xxx
+Testing error = 
+44.86696345.11229645.112296
+45.84606545.846065
+xxx
+min_testing_err = 44.866963
+max_testing_err = 45.846065
+avg_testing_err = 45.356737
+std_testing_err = 0.457784
+#### end ##################
+#213
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#214
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.001000
+    Proximal = 1000.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.047898 0.065342 0.062343
+ 0.062126 0.061337
+xxx
+Testing error = 
+45.03646545.80145946.312198
+45.79922845.817071
+xxx
+min_testing_err = 45.036465
+max_testing_err = 46.312198
+avg_testing_err = 45.753284
+std_testing_err = 0.456813
+#### end ##################
+#214
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#215
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.001000
+    Proximal = 1000.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.047809 0.066610 0.074834
+ 0.072990 0.063726
+xxx
+Testing error = 
+45.08330245.08553246.229676
+45.86390746.173919
+xxx
+min_testing_err = 45.083302
+max_testing_err = 46.229676
+avg_testing_err = 45.687267
+std_testing_err = 0.567692
+#### end ##################
+#215
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#216
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.001000
+    Proximal = 100.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.048017 0.100620 0.065941
+ 0.064623 0.064140
+xxx
+Testing error = 
+45.10560546.21406445.877289
+45.82376245.823762
+xxx
+min_testing_err = 45.105605
+max_testing_err = 46.214064
+avg_testing_err = 45.768896
+std_testing_err = 0.404938
+#### end ##################
+#216
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#217
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.001000
+    Proximal = 100.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.048719 0.069100 0.066812
+ 0.079963 0.081364
+xxx
+Testing error = 
+44.88034445.97096145.047617
+45.85275645.895131
+xxx
+min_testing_err = 44.880344
+max_testing_err = 45.970961
+avg_testing_err = 45.529362
+std_testing_err = 0.521220
+#### end ##################
+#217
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#218
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.001000
+    Proximal = 100.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.048202 0.071455 0.064517
+ 0.064346 0.078014
+xxx
+Testing error = 
+45.86836845.86390745.857216
+45.85721645.857216
+xxx
+min_testing_err = 45.857216
+max_testing_err = 45.868368
+avg_testing_err = 45.860785
+std_testing_err = 0.005135
+#### end ##################
+#218
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#219
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.001000
+    Proximal = 100.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.081987 0.123696 0.119295
+ 0.110824 0.096323
+xxx
+Testing error = 
+44.83796945.82599245.825992
+45.82599245.825992
+xxx
+min_testing_err = 44.837969
+max_testing_err = 45.825992
+avg_testing_err = 45.628387
+std_testing_err = 0.441857
+#### end ##################
+#219
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#220
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.001000
+    Proximal = 100.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.080516 0.091008 0.079001
+ 0.072701 0.063993
+xxx
+Testing error = 
+44.86027245.89513145.863907
+45.86390745.863907
+xxx
+min_testing_err = 44.860272
+max_testing_err = 45.895131
+avg_testing_err = 45.669425
+std_testing_err = 0.452532
+#### end ##################
+#220
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#221
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.001000
+    Proximal = 10.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.064748 0.089029 0.062984
+ 0.062585 0.061536
+xxx
+Testing error = 
+44.55026045.82599245.825992
+45.80815045.834913
+xxx
+min_testing_err = 44.550260
+max_testing_err = 45.834913
+avg_testing_err = 45.569061
+std_testing_err = 0.569610
+#### end ##################
+#221
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#222
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.001000
+    Proximal = 10.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.048883 0.072586 0.064284
+ 0.060665 0.062888
+xxx
+Testing error = 
+45.88174945.86390745.863907
+45.81930145.993264
+xxx
+min_testing_err = 45.819301
+max_testing_err = 45.993264
+avg_testing_err = 45.884426
+std_testing_err = 0.065070
+#### end ##################
+#222
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#223
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.001000
+    Proximal = 10.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.051132 0.072121 0.063888
+ 0.064393 0.061400
+xxx
+Testing error = 
+44.92718145.82376245.823762
+45.82376245.982113
+xxx
+min_testing_err = 44.927181
+max_testing_err = 45.982113
+avg_testing_err = 45.676116
+std_testing_err = 0.424245
+#### end ##################
+#223
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#224
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.001000
+    Proximal = 10.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.056740 0.072666 0.070432
+ 0.084384 0.071900
+xxx
+Testing error = 
+44.73760545.96204045.834913
+45.83268345.872828
+xxx
+min_testing_err = 44.737605
+max_testing_err = 45.962040
+avg_testing_err = 45.648014
+std_testing_err = 0.511623
+#### end ##################
+#224
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#225
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.001000
+    Proximal = 10.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.047318 0.071934 0.063360
+ 0.062857 0.064766
+xxx
+Testing error = 
+45.97765245.97765245.859446
+45.85944645.852756
+xxx
+min_testing_err = 45.852756
+max_testing_err = 45.977652
+avg_testing_err = 45.905391
+std_testing_err = 0.066022
+#### end ##################
+#225
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#226
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.001000
+    Proximal = 1.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.076383 0.072094 0.062384
+ 0.060692 0.061461
+xxx
+Testing error = 
+44.86696344.86696344.866963
+44.86696344.866963
+xxx
+min_testing_err = 44.866963
+max_testing_err = 44.866963
+avg_testing_err = 44.866963
+std_testing_err = 0.000000
+#### end ##################
+#226
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#227
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.001000
+    Proximal = 1.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.061746 0.060497 0.045107
+ 0.042571 0.042725
+xxx
+Testing error = 
+45.83045345.83045345.799228
+45.79922845.799228
+xxx
+min_testing_err = 45.799228
+max_testing_err = 45.830453
+avg_testing_err = 45.811718
+std_testing_err = 0.017102
+#### end ##################
+#227
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#228
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.001000
+    Proximal = 1.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.067282 0.074735 0.063176
+ 0.067954 0.071343
+xxx
+Testing error = 
+45.00524145.00524145.005241
+45.00524145.005241
+xxx
+min_testing_err = 45.005241
+max_testing_err = 45.005241
+avg_testing_err = 45.005241
+std_testing_err = 0.000000
+#### end ##################
+#228
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#229
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.001000
+    Proximal = 1.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.056126 0.052595 0.040666
+ 0.044491 0.044309
+xxx
+Testing error = 
+44.96955644.96955644.969556
+44.96955644.969556
+xxx
+min_testing_err = 44.969556
+max_testing_err = 44.969556
+avg_testing_err = 44.969556
+std_testing_err = 0.000000
+#### end ##################
+#229
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#230
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.001000
+    Proximal = 1.000000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.047856 0.045534 0.041067
+ 0.040788 0.039423
+xxx
+Testing error = 
+45.81261045.81261045.040926
+45.04092645.040926
+xxx
+min_testing_err = 45.040926
+max_testing_err = 45.812610
+avg_testing_err = 45.349600
+std_testing_err = 0.422669
+#### end ##################
+#230
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#231
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.001000
+    Proximal = 0.100000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.060044 0.058666 0.051998
+ 0.052905 0.073420
+xxx
+Testing error = 
+44.50565444.50565444.505654
+44.50565444.505654
+xxx
+min_testing_err = 44.505654
+max_testing_err = 44.505654
+avg_testing_err = 44.505654
+std_testing_err = 0.000000
+#### end ##################
+#231
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#232
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.001000
+    Proximal = 0.100000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.057127 0.060274 0.052234
+ 0.047407 0.045851
+xxx
+Testing error = 
+44.63947244.63947244.639472
+44.63947244.639472
+xxx
+min_testing_err = 44.639472
+max_testing_err = 44.639472
+avg_testing_err = 44.639472
+std_testing_err = 0.000000
+#### end ##################
+#232
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#233
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.001000
+    Proximal = 0.100000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.062369 0.057554 0.050524
+ 0.052095 0.051524
+xxx
+Testing error = 
+44.69746044.69746044.697460
+44.69746044.697460
+xxx
+min_testing_err = 44.697460
+max_testing_err = 44.697460
+avg_testing_err = 44.697460
+std_testing_err = 0.000000
+#### end ##################
+#233
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#234
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.001000
+    Proximal = 0.100000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.057077 0.068695 0.049358
+ 0.047796 0.046741
+xxx
+Testing error = 
+44.78667244.78667244.786672
+44.78667244.786672
+xxx
+min_testing_err = 44.786672
+max_testing_err = 44.786672
+avg_testing_err = 44.786672
+std_testing_err = 0.000000
+#### end ##################
+#234
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#235
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.001000
+    Proximal = 0.100000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.058391 0.069306 0.049041
+ 0.048428 0.051957
+xxx
+Testing error = 
+44.63278144.63278144.632781
+44.63278144.632781
+xxx
+min_testing_err = 44.632781
+max_testing_err = 44.632781
+avg_testing_err = 44.632781
+std_testing_err = 0.000000
+#### end ##################
+#235
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#236
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.001000
+    Proximal = 0.010000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.058796 0.056577 0.049777
+ 0.058932 0.061498
+xxx
+Testing error = 
+33.83143433.83143433.831434
+33.83143433.831434
+xxx
+min_testing_err = 33.831434
+max_testing_err = 33.831434
+avg_testing_err = 33.831434
+std_testing_err = 0.000000
+#### end ##################
+#236
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#237
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.001000
+    Proximal = 0.010000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.062753 0.057327 0.050766
+ 0.048749 0.050538
+xxx
+Testing error = 
+35.21422035.21422035.214220
+35.21422035.214220
+xxx
+min_testing_err = 35.214220
+max_testing_err = 35.214220
+avg_testing_err = 35.214220
+std_testing_err = 0.000000
+#### end ##################
+#237
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#238
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.001000
+    Proximal = 0.010000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.059147 0.055313 0.047935
+ 0.047515 0.049525
+xxx
+Testing error = 
+33.44782233.44782233.447822
+33.44782233.447822
+xxx
+min_testing_err = 33.447822
+max_testing_err = 33.447822
+avg_testing_err = 33.447822
+std_testing_err = 0.000000
+#### end ##################
+#238
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#239
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.001000
+    Proximal = 0.010000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.097803 0.070020 0.053651
+ 0.052623 0.053331
+xxx
+Testing error = 
+34.33771234.33771234.337712
+34.33771234.337712
+xxx
+min_testing_err = 34.337712
+max_testing_err = 34.337712
+avg_testing_err = 34.337712
+std_testing_err = 0.000000
+#### end ##################
+#239
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#240
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.001000
+    Proximal = 0.010000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.091737 0.091839 0.058392
+ 0.054172 0.060614
+xxx
+Testing error = 
+33.53034333.53034333.530343
+33.53034333.530343
+xxx
+min_testing_err = 33.530343
+max_testing_err = 33.530343
+avg_testing_err = 33.530343
+std_testing_err = 0.000000
+#### end ##################
+#240
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#241
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.001000
+    Proximal = 0.001000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.500000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.077742 0.080749 0.064586
+ 0.067646 0.067093
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#241
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#242
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.001000
+    Proximal = 0.001000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.100000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.079351 0.076226 0.083836
+ 0.059544 0.071373
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#242
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#243
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.001000
+    Proximal = 0.001000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.010000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.081664 0.092855 0.059389
+ 0.067191 0.071863
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#243
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#244
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.001000
+    Proximal = 0.001000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.001000
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.065803 0.062566 0.067476
+ 0.078144 0.069538
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#244
+xxxxxxxxxxxxxxxxxxxxxxxxx
+#245
+#### Setting ##############
+   Minibatch = 100
+       Epoch = 5
+ Kernel size = 61
+#### Trade-off ############
+     Regular = 1.000000
+   Empricial = 0.001000
+    Proximal = 0.001000
+  Synthestic = 0.000000
+       gamma = 0.075000
+#### Opt ##################
+      Step Type = 1
+  Learning rate = 0.000100
+  Hypergradient = 1.000000
+#### Result ###############
+Training Time = 
+ 0.060472 0.056319 0.051182
+ 0.057956 0.048431
+xxx
+Testing error = 
+ 2.979682 2.979682 2.979682
+ 2.979682 2.979682
+xxx
+min_testing_err = 2.979682
+max_testing_err = 2.979682
+avg_testing_err = 2.979682
+std_testing_err = 0.000000
+#### end ##################
+#245
+xxxxxxxxxxxxxxxxxxxxxxxxx
