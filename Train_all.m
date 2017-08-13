@@ -1,7 +1,7 @@
 function [Result,Model] = Train_all(filename,method,TF,Opt,Set,SizeoRatiofReducedset,gamma)
 %%
 %
-% method 0->SGD 1->SN 2->Adadelta
+% method 0->SGD , 1->SN , 2->Adadelta , 3->Adam
 %% Preprocessing 
 % load training and testing dataset
 load(['dataset/',filename,'.mat'],'TInst','TLabel');
@@ -56,6 +56,8 @@ elseif method == 1
     [Model,Result.train] = RSVM_SN_PHS(Model,TF,Opt,Set,TInst,TLabel);
 elseif method == 2
     [Model,Result.train] = RSVM_Adadelta_PHS(Model,TF,Opt,Set,TInst,TLabel);
+elseif method == 3
+    [Model,Result.train] = RSVM_Adam_PHS(Model,TF,Opt,Set,TInst,TLabel);
 end
 
 %% Testing
