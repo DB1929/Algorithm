@@ -265,7 +265,7 @@ script1(filename,method,SizeoRatiofReducedset,gamma,Set,Type)
 
 
 %Data set : svmguide1 - Adadelta
-%
+%{
 filename = 'svmguide1';
 method = 2;
 %% Set
@@ -291,6 +291,41 @@ gamma = 1e-3;
 
 %Reduce kernel subset size
 SizeoRatiofReducedset = 0.05;
+
+profile on
+[Result,Model] = Train_all(filename,method,TF,Opt,Set,SizeoRatiofReducedset,gamma)
+profile viewer
+Kernelprint(Model.RS,Model.RS,gamma);
+%}
+
+
+%Data set : w3a - Adadelta
+%
+filename = 'w3a';
+method = 2;
+%% Set
+Set.Minibatch = 100;   %BatchSize
+Set.Epoch     = 10;   %Epoch
+Set.Overlap   = 1 ;   %Overlap
+
+%% Trade-Off
+%C = 5;
+TF.C  = 1;
+TF.C1 = 100000;       %TrainLoss
+TF.C2 = 0;      %Syn
+TF.C3 = 10;      %Prox
+
+%% Opt
+Opt.eta  = 0.3;      %LearningRate
+Opt.beta = 0.1;         %Hyper 
+Opt.N = 2; 
+Opt.delta = 0.95;
+Opt.e = 1e-6;
+%gamma = 0.00001;
+gamma = 0.075;
+
+%Reduce kernel subset size
+SizeoRatiofReducedset = 0.0625;
 
 profile on
 [Result,Model] = Train_all(filename,method,TF,Opt,Set,SizeoRatiofReducedset,gamma)

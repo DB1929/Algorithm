@@ -150,7 +150,7 @@ for round = 1:Set.Epoch
         if nIh>0
             if round==1
         %% Proximal model
-                if n_p>0 && n_n>0
+                if n_p>1 && n_n>0
                     % Means
                     m_p = Stat_Info(1,:)/n_p;
                     m_n = Stat_Info(2,:)/n_n;
@@ -170,7 +170,7 @@ for round = 1:Set.Epoch
                     m_n = zeros(1,nDim);
                     s_p = zeros(1,nDim);
                     s_n = zeros(1,nDim);
-                    wp  = zeros(1,nDim);
+                    wp  = zeros(1,nDim)';
                     bp  = 0;
                     grad_prox_w = zeros(nDim,1);
                     grad_prox_b = 0;
@@ -232,32 +232,32 @@ for round = 1:Set.Epoch
                 grad_b = (TF.C*w(end) - grad_prox_b - grad_syn_b - 2*TF.C1*sum(gradw_part)); 
  
                 grad_final = [grad_w;grad_b];
-
+                direct = grad_final;
          %% Step size
                if Opt.N == 0
                   %  (stepsize == 1)
-                   w = w - grad_final;
+                   w = w - direct;
                    Report.eta(round,part) = 1; 
                elseif Opt.N == 1
                     %Optional : Armijo condition (for stepsize)
                     if  (grad_final'*grad_final/nDim > 1E-5)
                         if TF.C2>0 
-                            eta = Armijo(zKTInst,miniTLabel,[Syndata_P;Syndata_N],[ones(Syn_l_p,1);-1*ones(Syn_l_n,1)],w,[wp;bp],TF,grad_final,grad_final);
+                            eta = Armijo(zKTInst,miniTLabel,[Syndata_P;Syndata_N],[ones(Syn_l_p,1);-1*ones(Syn_l_n,1)],w,[wp;bp],TF,direct,grad_final);
                         else
-                            eta = Armijo(zKTInst,miniTLabel,0,0,w,[wp;bp],TF,grad_final,grad_final);
+                            eta = Armijo(zKTInst,miniTLabel,0,0,w,[wp;bp],TF,direct,grad_final);
                         end
-                        w = w - eta * grad_final;
+                        w = w - eta * direct;
                         Report.eta(round,part) = eta;    
                     end
                elseif Opt.N == 2
                    % Hypergradient
                    H          = Hyper_grad' * grad_final/(Hyper_grad' * Hyper_grad * grad_final' * grad_final+eps)^(1/2);
                    eta        = eta + Opt.beta * H;
-                   Hyper_grad = grad_final;
+                   Hyper_grad = direct;
                    Report.eta(round,part) = eta;                   
-                   w = w - eta.* grad_final; 
+                   w = w - eta.* direct; 
                elseif Opt.N == 3
-                   w = w - eta * grad_final;
+                   w = w - eta * direct;
                    Report.eta(round,part) = eta;   
                end % Stepsize end                           
                %{

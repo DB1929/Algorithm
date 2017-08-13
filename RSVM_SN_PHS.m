@@ -90,7 +90,7 @@ for round = 1:Set.Epoch
     else
        w = Model.W(:,round-1); 
     end
-    
+    ind_end = 0;
     %Overlapping setting
     zKTInst_pre = [];
     miniTLabel_pre = [];
@@ -150,7 +150,7 @@ for round = 1:Set.Epoch
         if nIh>0
             if round==1
         %% Proximal model
-                if n_p>0 && n_n>0
+                if n_p>1 && n_n>1
                     % Means
                     m_p = Stat_Info(1,:)/n_p;
                     m_n = Stat_Info(2,:)/n_n;
