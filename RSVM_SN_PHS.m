@@ -211,14 +211,20 @@ for round = 1:Set.Epoch
                  grad_syn_w = 0;
                  grad_syn_b = 0;
                 elseif isempty(Syn_Ih_N)
-                 grad_syn_w = 2*TF.C2*Syndata_P(Syn_Ih_P,:)'*loss_P(Syn_Ih_P)/Syn_nIh;
-                 grad_syn_b = 2*TF.C2*sum(loss_P(Syn_Ih_P))/Syn_nIh;
+                 %grad_syn_w = 2*TF.C2*Syndata_P(Syn_Ih_P,:)'*loss_P(Syn_Ih_P)/Syn_nIh;
+                 %grad_syn_b = 2*TF.C2*sum(loss_P(Syn_Ih_P))/Syn_nIh;
+                 grad_syn_w = 2*TF.C2*Syndata_P(Syn_Ih_P,:)'*loss_P(Syn_Ih_P);
+                 grad_syn_b = 2*TF.C2*sum(loss_P(Syn_Ih_P));
                 elseif isempty(Syn_Ih_P)
-                 grad_syn_w = 2*TF.C2*Syndata_N(Syn_Ih_N,:)'*loss_N(Syn_Ih_N)*(-1)/Syn_nIh;
-                 grad_syn_b = 2*TF.C2*sum(loss_N(Syn_Ih_N)*(-1))/Syn_nIh; 
+                 %grad_syn_w = 2*TF.C2*Syndata_N(Syn_Ih_N,:)'*loss_N(Syn_Ih_N)*(-1)/Syn_nIh;
+                 %grad_syn_b = 2*TF.C2*sum(loss_N(Syn_Ih_N)*(-1))/Syn_nIh; 
+                 grad_syn_w = 2*TF.C2*Syndata_N(Syn_Ih_N,:)'*loss_N(Syn_Ih_N)*(-1);
+                 grad_syn_b = 2*TF.C2*sum(loss_N(Syn_Ih_N)*(-1)); 
                 else               
-                 grad_syn_w = 2*TF.C2*(Syndata_P(Syn_Ih_P,:)'*loss_P(Syn_Ih_P)+ Syndata_N(Syn_Ih_N,:)'*loss_N(Syn_Ih_N)*(-1))/Syn_nIh;
-                 grad_syn_b = 2*TF.C2*(sum(loss_P(Syn_Ih_P))+sum(loss_N(Syn_Ih_N)*(-1)))/Syn_nIh;
+                 %grad_syn_w = 2*TF.C2*(Syndata_P(Syn_Ih_P,:)'*loss_P(Syn_Ih_P)+ Syndata_N(Syn_Ih_N,:)'*loss_N(Syn_Ih_N)*(-1))/Syn_nIh;
+                 %grad_syn_b = 2*TF.C2*(sum(loss_P(Syn_Ih_P))+sum(loss_N(Syn_Ih_N)*(-1)))/Syn_nIh;
+                 grad_syn_w = 2*TF.C2*(Syndata_P(Syn_Ih_P,:)'*loss_P(Syn_Ih_P)+ Syndata_N(Syn_Ih_N,:)'*loss_N(Syn_Ih_N)*(-1));
+                 grad_syn_b = 2*TF.C2*(sum(loss_P(Syn_Ih_P))+sum(loss_N(Syn_Ih_N)*(-1)));
                 end
         else
             grad_syn_w = 0;
@@ -227,7 +233,8 @@ for round = 1:Set.Epoch
                 
          %% Stochastic Newton Method update                           
                % Final gradient
-                gradw_part = loss(Ih).*miniTLabel(Ih)/nIh;
+                %gradw_part = loss(Ih).*miniTLabel(Ih)/nIh;
+                gradw_part = loss(Ih).*miniTLabel(Ih);
                 grad_w = (TF.C*w(1:end-1) - grad_prox_w - grad_syn_w - 2*TF.C1*zKTInst(Ih,:)'*(gradw_part) ) ;
                 grad_b = (TF.C*w(end) - grad_prox_b - grad_syn_b - 2*TF.C1*sum(gradw_part)); 
  
@@ -238,10 +245,14 @@ for round = 1:Set.Epoch
                % Q:(batch size + synthestic data size) X (feature dimension + 1)
                
                 if TF.C2>0 && (~isempty(Syn_Ih_N) || ~isempty(Syn_Ih_P))
-                   Q = [zKTInst(Ih,:)*(TF.C1/nIh),ones(nIh,1)*(TF.C1/nIh);Syndata_P(Syn_Ih_P,:)*(TF.C2/Syn_nIh),ones(length(Syn_Ih_P),1)*(TF.C2/Syn_nIh);Syndata_N(Syn_Ih_N,:)*(TF.C2/Syn_nIh),ones(length(Syn_Ih_N),1)*(TF.C2/Syn_nIh)]; 
+                   %Q = [zKTInst(Ih,:)*(TF.C1/nIh),ones(nIh,1)*(TF.C1/nIh);Syndata_P(Syn_Ih_P,:)*(TF.C2/Syn_nIh),ones(length(Syn_Ih_P),1)*(TF.C2/Syn_nIh);Syndata_N(Syn_Ih_N,:)*(TF.C2/Syn_nIh),ones(length(Syn_Ih_N),1)*(TF.C2/Syn_nIh)]; 
+                   %Nt_direct = grad_final/TF.C - 2*(1/(TF.C))*Q'*((eye(nIh+Syn_nIh)+2*Q*Q')\(Q*grad_final));
+                   Q = [zKTInst(Ih,:)*(TF.C1),ones(nIh,1)*(TF.C1);Syndata_P(Syn_Ih_P,:)*(TF.C2),ones(length(Syn_Ih_P),1)*(TF.C2);Syndata_N(Syn_Ih_N,:)*(TF.C2),ones(length(Syn_Ih_N),1)*(TF.C2)]; 
                    Nt_direct = grad_final/TF.C - 2*(1/(TF.C))*Q'*((eye(nIh+Syn_nIh)+2*Q*Q')\(Q*grad_final));
                 else
-                   Q = [zKTInst(Ih,:)*(TF.C1/nIh),ones(nIh,1)*(TF.C1/nIh)];                    
+                   %Q = [zKTInst(Ih,:)*(TF.C1/nIh),ones(nIh,1)*(TF.C1/nIh)];
+                   %Nt_direct = grad_final/TF.C - 2*(1/(TF.C))*Q'*((eye(nIh)+2*Q*Q')\(Q*grad_final));
+                   Q = [zKTInst(Ih,:)*(TF.C1),ones(nIh,1)*(TF.C1)];                    
                    Nt_direct = grad_final/TF.C - 2*(1/(TF.C))*Q'*((eye(nIh)+2*Q*Q')\(Q*grad_final));
                 end
                %% Step size
@@ -281,7 +292,7 @@ for round = 1:Set.Epoch
                     end
                elseif Opt.N == 2
                    % Hypergradient
-                   H          = Hyper_grad' * grad_final/(Hyper_grad' * Hyper_grad * Nt_direct' * Nt_direct+eps)^(1/2);
+                   H          = Hyper_grad' * grad_final/(Hyper_grad' * Hyper_grad * grad_final' * grad_final+eps)^(1/2); 
                    eta        = eta + Opt.beta * H;
                    Hyper_grad = Nt_direct;
                    Report.eta(round,part) = eta;                   

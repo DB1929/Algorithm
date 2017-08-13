@@ -211,14 +211,20 @@ for round = 1:Set.Epoch
                  grad_syn_w = 0;
                  grad_syn_b = 0;
                 elseif isempty(Syn_Ih_N)
-                 grad_syn_w = 2*TF.C2*Syndata_P(Syn_Ih_P,:)'*loss_P(Syn_Ih_P)/Syn_nIh;
-                 grad_syn_b = 2*TF.C2*sum(loss_P(Syn_Ih_P))/Syn_nIh;
+                 %grad_syn_w = 2*TF.C2*Syndata_P(Syn_Ih_P,:)'*loss_P(Syn_Ih_P)/Syn_nIh;
+                 %grad_syn_b = 2*TF.C2*sum(loss_P(Syn_Ih_P))/Syn_nIh;
+                 grad_syn_w = 2*TF.C2*Syndata_P(Syn_Ih_P,:)'*loss_P(Syn_Ih_P);
+                 grad_syn_b = 2*TF.C2*sum(loss_P(Syn_Ih_P));
                 elseif isempty(Syn_Ih_P)
-                 grad_syn_w = 2*TF.C2*Syndata_N(Syn_Ih_N,:)'*loss_N(Syn_Ih_N)*(-1)/Syn_nIh;
-                 grad_syn_b = 2*TF.C2*sum(loss_N(Syn_Ih_N)*(-1))/Syn_nIh; 
-                else               
-                 grad_syn_w = 2*TF.C2*(Syndata_P(Syn_Ih_P,:)'*loss_P(Syn_Ih_P)+ Syndata_N(Syn_Ih_N,:)'*loss_N(Syn_Ih_N)*(-1))/Syn_nIh;
-                 grad_syn_b = 2*TF.C2*(sum(loss_P(Syn_Ih_P))+sum(loss_N(Syn_Ih_N)*(-1)))/Syn_nIh;
+                 %grad_syn_w = 2*TF.C2*Syndata_N(Syn_Ih_N,:)'*loss_N(Syn_Ih_N)*(-1)/Syn_nIh;
+                 %grad_syn_b = 2*TF.C2*sum(loss_N(Syn_Ih_N)*(-1))/Syn_nIh; 
+                 grad_syn_w = 2*TF.C2*Syndata_N(Syn_Ih_N,:)'*loss_N(Syn_Ih_N)*(-1);
+                 grad_syn_b = 2*TF.C2*sum(loss_N(Syn_Ih_N)*(-1)); 
+                else
+                 %grad_syn_w = 2*TF.C2*(Syndata_P(Syn_Ih_P,:)'*loss_P(Syn_Ih_P)+ Syndata_N(Syn_Ih_N,:)'*loss_N(Syn_Ih_N)*(-1))/Syn_nIh;
+                 %grad_syn_b = 2*TF.C2*(sum(loss_P(Syn_Ih_P))+sum(loss_N(Syn_Ih_N)*(-1)))/Syn_nIh;
+                 grad_syn_w = 2*TF.C2*(Syndata_P(Syn_Ih_P,:)'*loss_P(Syn_Ih_P)+ Syndata_N(Syn_Ih_N,:)'*loss_N(Syn_Ih_N)*(-1));
+                 grad_syn_b = 2*TF.C2*(sum(loss_P(Syn_Ih_P))+sum(loss_N(Syn_Ih_N)*(-1)));
                 end
         else
             grad_syn_w = 0;
@@ -227,7 +233,8 @@ for round = 1:Set.Epoch
                 
          %% SGD update                           
                % Final gradient
-                gradw_part = loss(Ih).*miniTLabel(Ih)/nIh;
+                %gradw_part = loss(Ih).*miniTLabel(Ih)/nIh;
+                gradw_part = loss(Ih).*miniTLabel(Ih);
                 grad_w = (TF.C*w(1:end-1) - grad_prox_w - grad_syn_w - 2*TF.C1*zKTInst(Ih,:)'*(gradw_part) ) ;
                 grad_b = (TF.C*w(end) - grad_prox_b - grad_syn_b - 2*TF.C1*sum(gradw_part)); 
  

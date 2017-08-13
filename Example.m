@@ -6,23 +6,23 @@ clear all
 %Data set : svmguide1
 %{
 filename = 'svmguide1';
-
+method = 0;
 %% Set
-Set.Minibatch = 10;   %BatchSize
+Set.Minibatch = 100;   %BatchSize
 Set.Epoch     = 10;   %Epoch
 Set.Overlap   = 1 ;   %Overlap
 
 %% Trade-Off
 %C = 5;
-TF.C  = 0.1;
+TF.C  = 1;
 TF.C1 = 100;       %TrainLoss
 TF.C2 = 0.1;      %Syn
-TF.C3 = 10;      %Prox
+TF.C3 = 0.1;      %Prox
 
 %% Opt
 Opt.eta  = 0.0003;      %LearningRate
 Opt.beta = 0.0001;         %Hyper 
-Opt.N = 3; 
+Opt.N = 2; 
 %gamma = 0.00001;
 gamma = 1e-3;
 
@@ -30,7 +30,7 @@ gamma = 1e-3;
 SizeoRatiofReducedset = 0.05;
 
 profile on
-[Result,Model] = Train_SGD(filename,TF,Opt,Set,SizeoRatiofReducedset,gamma)
+[Result,Model] = Train_all(filename,method,TF,Opt,Set,SizeoRatiofReducedset,gamma)
 profile viewer
 Kernelprint(Model.RS,Model.RS,gamma);
 %}
@@ -38,31 +38,31 @@ Kernelprint(Model.RS,Model.RS,gamma);
 %Data set : w3a 
 %{
 filename = 'w3a';
-
+method = 0;
 %% Set
-Set.Minibatch = 1500;   %BatchSize
+Set.Minibatch = 10;   %BatchSize
 Set.Epoch     = 10;   %Epoch
 Set.Overlap   = 1 ;   %Overlap
 
 %% Trade-Off
 %C = 5;
-TF.C  = 0.001;
+TF.C  = 1;
 TF.C1 = 10;       %TrainLoss
 TF.C2 = 0;      %Syn
-TF.C3 = 0.01;      %Prox
+TF.C3 = 0.1;      %Prox
 
 %% Opt
-Opt.eta  = 0.003;      %LearningRate
-Opt.beta = 0.0001;         %Hyper 
-
+Opt.eta  = 0.00003;      %LearningRate
+Opt.beta = 0.00001;         %Hyper 
+Opt.N = 2;
 %gamma = 0.00001;
 %gamma = 0.09;
 gamma = 0.075;
 %Reduce kernel subset size
-SizeoRatiofReducedset = 0.0125;
+SizeoRatiofReducedset = 0.0625;
 
 profile on
-[Result_training,Result_testing,Model] = Train_SGD(filename,TF,Opt,Set,SizeoRatiofReducedset,gamma)
+[Result,Model] = Train_all(filename,method,TF,Opt,Set,SizeoRatiofReducedset,gamma)
 profile viewer
 Kernelprint(Model.RS,Model.RS,gamma);
 %}
@@ -106,25 +106,25 @@ Kernelprint(Model.RS,Model.RS,gamma);
 
 
 %Data set : svmguide1 -SN
-%{
+%
 filename = 'svmguide1';
-
+method = 1;
 %% Set
-Set.Minibatch = 100;   %BatchSize
+Set.Minibatch = 10;   %BatchSize
 Set.Epoch     = 10;   %Epoch
 Set.Overlap   = 1 ;   %Overlap
 
 %% Trade-Off
 %C = 5;
-TF.C  = 1;
-TF.C1 = 100;       %TrainLoss
+TF.C  = 0.1;
+TF.C1 = 1000;       %TrainLoss
 TF.C2 = 0;      %Syn
 TF.C3 = 0.1;      %Prox
 
 %% Opt
 Opt.eta  = 0.03;      %LearningRate
-Opt.beta = 0.001;         %Hyper 
-Opt.N = 1;
+Opt.beta = 0.01;         %Hyper 
+Opt.N = 2;
 %gamma = 0.00001;
 gamma = 1e-3;
 
@@ -132,7 +132,7 @@ gamma = 1e-3;
 SizeoRatiofReducedset = 0.05;
 
 profile on
-[Result,Model] = Train_SN(filename,TF,Opt,Set,SizeoRatiofReducedset,gamma)
+[Result,Model] = Train_all(filename,method,TF,Opt,Set,SizeoRatiofReducedset,gamma)
 profile viewer
 Kernelprint(Model.RS,Model.RS,gamma);
 %}
@@ -372,7 +372,7 @@ Kernelprint(Model.RS,Model.RS,gamma);
 
 
 %Data set : w3a - Adam
-%
+%{
 filename = 'w3a';
 method = 3;
 %% Set
