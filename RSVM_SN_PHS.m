@@ -281,7 +281,7 @@ for round = 1:Set.Epoch
                     end
                elseif Opt.N == 2
                    % Hypergradient
-                   H          = Hyper_grad' * grad_final/(Hyper_grad' * Hyper_grad * grad_final' * grad_final+eps)^(1/2);
+                   H          = Hyper_grad' * grad_final/(Hyper_grad' * Hyper_grad * Nt_direct' * Nt_direct+eps)^(1/2);
                    eta        = eta + Opt.beta * H;
                    Hyper_grad = Nt_direct;
                    Report.eta(round,part) = eta;                   

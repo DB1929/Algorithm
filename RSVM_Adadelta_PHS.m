@@ -1,7 +1,7 @@
-function [Model,Report] = RSVM_SGD_PHS(Model,TF,Opt,Set,Inst,Label)
+function [Model,Report] = RSVM_Adadelta_PHS(Model,TF,Opt,Set,Inst,Label)
 %% ========================================================================
 % JIAN-PING SYU
-% SGD with (1)Proximal Model (2)Hypergradient (3)Synthetic Data
+% Adadelta with (1)Proximal Model (2)Hypergradient (3)Synthetic Data
 %           Reduce Kernel Support Vector Machine
 % Read Me ================================================================%
 % Inputs :
@@ -19,6 +19,8 @@ function [Model,Report] = RSVM_SGD_PHS(Model,TF,Opt,Set,Inst,Label)
 %        (3) Opt          : Parameter of optimization algorithm
 %            Opt.eta      : Learning rate
 %            Opt.beta     : Parameter of Hypergradient 
+%            Opt.delta    : Decay rate in Adadelta algorithm
+%            Opt.e        : Adadelta parameter in RMS function
 %            Opt.N        : 0-> Newton step 1->Armijo 2-> Hypergradient 
 %                           3-> Fixed eta
 %
@@ -71,6 +73,10 @@ w       = Model.W(:,1);                      %Initial the weight
 %Model.W = zeros(rs1,Set.Epoch);
 eta     = Opt.eta;
 
+
+% Adadelta initial
+E_gg = 0;
+E_tt = 0;
 %Report
 Report.time = zeros(Set.Epoch,1);
 Report.loss = zeros(Set.Epoch,PartNum);
@@ -117,19 +123,6 @@ for round = 1:Set.Epoch
         %% Statistical Information
         if round==1
             [Stat_Info,n_p,n_n] = Stat(zKTInst,miniTLabel,Stat_Info,n_p,n_n);
-           %{
-            ind_p = find(miniTLabel>0);
-            ind_n = find(miniTLabel<0);
-            KT_p = zKTInst(ind_p,:);
-            KT_n = zKTInst(ind_n,:);
-            Stat_Info(1,:) = Stat_Info(1,:) + sum(KT_p,1);
-            Stat_Info(2,:) = Stat_Info(2,:) + sum(KT_n,1);
-            Stat_Info(3,:) = Stat_Info(3,:) + sum(KT_p.^2,1);
-            Stat_Info(4,:) = Stat_Info(4,:) + sum(KT_n.^2,1);
-            
-            n_p = n_p + size(ind_p,1);
-            n_n = n_n + size(ind_n,1);
-            %}
         end
         
         %% Overlapping Strategty
@@ -170,8 +163,6 @@ for round = 1:Set.Epoch
                     m_n = zeros(1,nDim);
                     s_p = zeros(1,nDim);
                     s_n = zeros(1,nDim);
-                    wp  = zeros(1,nDim)';
-                    bp  = 0;
                     grad_prox_w = zeros(nDim,1);
                     grad_prox_b = 0;
                 end
@@ -225,14 +216,21 @@ for round = 1:Set.Epoch
             grad_syn_b = 0;
         end
                 
-         %% SGD update                           
+         %% Adadelta update                           
                % Final gradient
                 gradw_part = loss(Ih).*miniTLabel(Ih)/nIh;
                 grad_w = (TF.C*w(1:end-1) - grad_prox_w - grad_syn_w - 2*TF.C1*zKTInst(Ih,:)'*(gradw_part) ) ;
                 grad_b = (TF.C*w(end) - grad_prox_b - grad_syn_b - 2*TF.C1*sum(gradw_part)); 
- 
                 grad_final = [grad_w;grad_b];
-                direct = grad_final;
+    
+                % Adadelta Update
+                E_gg = Opt.delta * E_gg + (1-Opt.delta)*(grad_final.*grad_final);
+                RMS_gg = (E_gg + Opt.e)^(1/2);
+                RMS_xx = (E_xx + Opt.e)^(1/2);
+                direct = -1 * (RMS_xx./RMS_gg) .* grad_final;
+                E_xx = Opt.delta * E_xx + (1-Opt.delta) * direct.*direct;
+                direct = -1*direct;
+                
          %% Step size
                if Opt.N == 0
                   %  (stepsize == 1)
@@ -251,7 +249,7 @@ for round = 1:Set.Epoch
                     end
                elseif Opt.N == 2
                    % Hypergradient
-                   H          = Hyper_grad' * grad_final/(Hyper_grad' * Hyper_grad * grad_final' * grad_final+eps)^(1/2);
+                   H          = Hyper_grad' * direct/(Hyper_grad' * Hyper_grad * direct' * direct+eps)^(1/2);
                    eta        = eta + Opt.beta * H;
                    Hyper_grad = direct;
                    Report.eta(round,part) = eta;                   
@@ -259,16 +257,8 @@ for round = 1:Set.Epoch
                elseif Opt.N == 3
                    w = w - eta * direct;
                    Report.eta(round,part) = eta;   
-               end % Stepsize end                           
-               %{
-               % Hypergradient
-               H          = Hyper_grad' * grad_final/(Hyper_grad' * Hyper_grad * grad_final' * grad_final+eps)^(1/2);
-               eta        = eta + Opt.beta * H;
-               Hyper_grad = grad_final;
-               Report.eta(round,part) = eta;
-              % SGD algorithm 
-               w = w - eta.*grad_final; 
-                %}
+               end % Stepsize end                                
+
               
         end %Update Part end
         
