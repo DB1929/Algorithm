@@ -55,13 +55,9 @@ end
     Result.avg_testing_err = mean(Result.Testing_error);
     % Model relative
     if ModelNum >1
-       ModelRelate =[];
-       for i = 1:ModelNum-1
-           ModelRelate =[ModelRelate,Model.W(:,i)'*Model.W(:,i+1)/(norm(Model.W(:,i))*norm(Model.W(:,i+1)))];
-       end
-       Result.ModelRelate = ModelRelate;
+       Result. 
     else
-       Result.ModelRelate = []; 
+       Report.ModelRelate = -10; 
     end
     Result.std_testing_err = std(Result.Testing_error);
 end

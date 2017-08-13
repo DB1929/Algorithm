@@ -36,7 +36,7 @@ Kernelprint(Model.RS,Model.RS,gamma);
 %}
 
 %Data set : w3a 
-%{
+%
 filename = 'w3a';
 method = 0;
 %% Set
