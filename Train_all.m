@@ -54,7 +54,8 @@ if method == 0
     %[Model,Result.train] = RSVM_SGD_PHS(Model,TF,Opt,Set,TInst,TLabel);
      [Model,Result.train] = RSVM_SGD_PHS_v2(Model,TF,Opt,Set,TInst,TLabel);
 elseif method == 1 
-    [Model,Result.train] = RSVM_SN_PHS(Model,TF,Opt,Set,TInst,TLabel);
+    %[Model,Result.train] = RSVM_SN_PHS(Model,TF,Opt,Set,TInst,TLabel);
+    [Model,Result.train] = RSVM_SN_PHS_v2(Model,TF,Opt,Set,TInst,TLabel);
 elseif method == 2
     %[Model,Result.train] = RSVM_Adadelta_PHS(Model,TF,Opt,Set,TInst,TLabel);
     [Model,Result.train] = RSVM_Adadelta_PHS_v2(Model,TF,Opt,Set,TInst,TLabel);

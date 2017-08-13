@@ -1,7 +1,7 @@
-function [Model,Report] = RSVM_Adadelta_PHS_v2(Model,TF,Opt,Set,Inst,Label)
+function [Model,Report] = RSVM_SN_PHS_v2(Model,TF,Opt,Set,Inst,Label)
 %% ========================================================================
 % JIAN-PING SYU
-% Adadelta with (1)Proximal Model (2)Hypergradient (3)Synthetic Data
+% Stochastic Newton with (1)Proximal Model (2)Hypergradient (3)Synthetic Data
 %           Reduce Kernel Support Vector Machine
 %           ! v2 Renew the Synthetic Data 
 % Read Me ================================================================%
@@ -20,8 +20,6 @@ function [Model,Report] = RSVM_Adadelta_PHS_v2(Model,TF,Opt,Set,Inst,Label)
 %        (3) Opt          : Parameter of optimization algorithm
 %            Opt.eta      : Learning rate
 %            Opt.beta     : Parameter of Hypergradient 
-%            Opt.delta    : Decay rate in Adadelta algorithm
-%            Opt.e        : Adadelta parameter in RMS function
 %            Opt.N        : 0-> Newton step 1->Armijo 2-> Hypergradient 
 %                           3-> Fixed eta
 %
@@ -74,10 +72,6 @@ w       = Model.W(:,1);                      %Initial the weight
 %Model.W = zeros(rs1,Set.Epoch);
 eta     = Opt.eta;
 
-
-% Adadelta initial
-E_gg = 0;
-E_xx = 0;
 %Report
 Report.time = zeros(Set.Epoch,1);
 Report.loss = zeros(Set.Epoch,PartNum);
@@ -124,6 +118,19 @@ for round = 1:Set.Epoch
         %% Statistical Information
         if round==1
             [Stat_Info,n_p,n_n] = Stat(zKTInst,miniTLabel,Stat_Info,n_p,n_n);
+           %{
+            ind_p = find(miniTLabel>0);
+            ind_n = find(miniTLabel<0);
+            KT_p = zKTInst(ind_p,:);
+            KT_n = zKTInst(ind_n,:);
+            Stat_Info(1,:) = Stat_Info(1,:) + sum(KT_p,1);
+            Stat_Info(2,:) = Stat_Info(2,:) + sum(KT_n,1);
+            Stat_Info(3,:) = Stat_Info(3,:) + sum(KT_p.^2,1);
+            Stat_Info(4,:) = Stat_Info(4,:) + sum(KT_n.^2,1);
+            
+            n_p = n_p + size(ind_p,1);
+            n_n = n_n + size(ind_n,1);
+            %}
         end
         
         %% Overlapping Strategty
@@ -164,7 +171,8 @@ for round = 1:Set.Epoch
                     m_n = zeros(1,nDim);
                     s_p = zeros(1,nDim);
                     s_n = zeros(1,nDim);
-                    
+                    wp  = zeros(1,nDim)';
+                    bp  = 0;
                     grad_prox_w = zeros(nDim,1);
                     grad_prox_b = 0;
                 end
@@ -213,51 +221,57 @@ for round = 1:Set.Epoch
             grad_syn_w = 0;
             grad_syn_b = 0;
         end
-                     
-         %% Adadelta update                           
+                
+         %% Stochastic Newton Method update                           
                % Final gradient
                 %gradw_part = loss(Ih).*miniTLabel(Ih)/nIh;
                 gradw_part = loss(Ih).*miniTLabel(Ih);
                 grad_w = (TF.C*w(1:end-1) - grad_prox_w - grad_syn_w - 2*TF.C1*zKTInst(Ih,:)'*(gradw_part) ) ;
                 grad_b = (TF.C*w(end) - grad_prox_b - grad_syn_b - 2*TF.C1*sum(gradw_part)); 
+ 
                 grad_final = [grad_w;grad_b];
-    
-                % Adadelta Update
-                E_gg = Opt.delta * E_gg + (1-Opt.delta)*(grad_final.*grad_final);
-                RMS_gg = (E_gg + Opt.e).^(1/2);
-                RMS_xx = (E_xx + Opt.e).^(1/2);
-                direct = -1 * (RMS_xx./RMS_gg) .* grad_final;
-                E_xx = Opt.delta * E_xx + (1-Opt.delta) * direct.*direct;
-                direct = -1*direct;
-                
-         %% Step size
+
+               % Hessian matrix
+               % w = w - eta * (g/C1 - 2/(C1^2) * Q' * (I+2QQ')^(-1) * Q * g))
+               % Q:(batch size + synthestic data size) X (feature dimension + 1)
+               
+                if TF.C2>0 && ~isempty(SynData)
+                   Q = [zKTInst(Ih,:)*(TF.C1),ones(nIh,1)*(TF.C1);SynData(Syn_Ih,:)*(TF.C2),ones(Syn_nIh,1)*(TF.C2)]; 
+                   Nt_direct = grad_final/TF.C - 2*(1/(TF.C))*Q'*((eye(nIh+Syn_nIh)+2*Q*Q')\(Q*grad_final));
+                else
+                   %Q = [zKTInst(Ih,:)*(TF.C1/nIh),ones(nIh,1)*(TF.C1/nIh)];
+                   %Nt_direct = grad_final/TF.C - 2*(1/(TF.C))*Q'*((eye(nIh)+2*Q*Q')\(Q*grad_final));
+                   Q = [zKTInst(Ih,:)*(TF.C1),ones(nIh,1)*(TF.C1)];                    
+                   Nt_direct = grad_final/TF.C - 2*(1/(TF.C))*Q'*((eye(nIh)+2*Q*Q')\(Q*grad_final));
+                end
+               %% Step size
                if Opt.N == 0
-                  %  (stepsize == 1)
-                   w = w - direct;
+                  % Newton Step (stepsize == 1)
+                   w = w - Nt_direct;
                    Report.eta(round,part) = 1; 
+
                elseif Opt.N == 1
                     %Optional : Armijo condition (for stepsize)
                     if  (grad_final'*grad_final/nDim > 1E-5)
-                        if TF.C2>0 
-                            eta = Armijo(zKTInst,miniTLabel,SynData,SynLabel,w,[wp;bp],TF,direct,grad_final);
+                        if TF.C2>0
+                            eta = Armijo(zKTInst,miniTLabel,SynData,SynLabel,w,[wp;bp],TF,Nt_direct,grad_final);
                         else
-                            eta = Armijo(zKTInst,miniTLabel,0,0,w,[wp;bp],TF,direct,grad_final);
+                            eta = Armijo(zKTInst,miniTLabel,0,0,w,[wp;bp],TF,Nt_direct,grad_final);
                         end
-                        w = w - eta * direct;
-                        Report.eta(round,part) = eta;    
+                        w = w - eta * Nt_direct;
+                        Report.eta(round,part) = eta;   
                     end
                elseif Opt.N == 2
                    % Hypergradient
-                   H          = Hyper_grad' * grad_final/(Hyper_grad' * Hyper_grad * grad_final' * grad_final+eps)^(1/2);
+                   H          = Hyper_grad' * grad_final/(Hyper_grad' * Hyper_grad * grad_final' * grad_final+eps)^(1/2); 
                    eta        = eta + Opt.beta * H;
-                   Hyper_grad = direct;
+                   Hyper_grad = Nt_direct;
                    Report.eta(round,part) = eta;                   
-                   w = w - eta.* direct; 
+                   w = w - eta.*Nt_direct; 
                elseif Opt.N == 3
-                   w = w - eta * direct;
+                   w = w - eta  *Nt_direct;
                    Report.eta(round,part) = eta;   
-               end % Stepsize end                                
-
+               end % Stepsize end           
               
         end %Update Part end
         
@@ -354,6 +368,38 @@ else   %reduced kernel, or kernel matrix for test data
 end
 end
 
+%{
+function stepsize = armijo(Tdata,Tlabel,Tdata_syn,Tlabel_syn,w,wp,TF,direct,gap,obj1)
+%% ========================================================================
+% Armijo Stepsize
+%
+% Inputs
+%   w1, b1: Current model
+%   C     : Weight parameter
+%   gap   : Defined in ssvm code
+%   obj1  : The object function value of current model
+%   diff  : The difference of objective function values between current
+%           and next model
+%==========================================================================
+%%
+diff=0;
+temp=0.5; % we start to test with setpsize=0.5
+count = 1;
+while diff  < -0.05*temp*gap
+    temp = 0.5*temp;
+    w2 = w - temp*direct;
+    obj2 = objf(Tdata,Tlabel,Tdata_syn,Tlabel_syn,w2,wp,TF);
+    diff = obj1 - obj2;
+    count = count+1;
+    if (count>20)
+        break;
+    end
+end;
+
+stepsize = temp;
+end
+%}
+
 function stepsize = Armijo(Tdata,Tlabel,Tdata_syn,Tlabel_syn,w,wp,TF,direct,grad)
 %% ========================================================================
 % Armijo Stepsize
@@ -391,7 +437,7 @@ obj2 = objf(Tdata,Tlabel,Tdata_syn,Tlabel_syn,w2,wp,TF);
         end;
         stepsize = temp; 
     else
-        stepsize = 0.1;
+        stepsize = 1;
     end
 
 end
@@ -412,3 +458,5 @@ else
 end
     value = 0.5*TF.C*(w'*w) + TF.C1*(v'*v)/length(v) - TF.C3*w'*wp + TF.C2*(v_s'*v_s)/length(v_s);
 end
+
+

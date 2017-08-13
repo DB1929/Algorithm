@@ -118,7 +118,7 @@ Set.Overlap   = 1 ;   %Overlap
 %C = 5;
 TF.C  = 1;
 TF.C1 = 100;       %TrainLoss
-TF.C2 = 0;      %Syn
+TF.C2 = 0.01;      %Syn
 TF.C3 = 0.01;      %Prox
 
 %% Opt
@@ -174,7 +174,7 @@ Kernelprint(Model.RS,Model.RS,gamma);
 %Data set : a9a -SN
 %{
 filename = 'a9a';
-
+method = 1;
 %% Set
 Set.Minibatch = 100;   %BatchSize
 Set.Epoch     = 10;   %Epoch
@@ -182,23 +182,23 @@ Set.Overlap   = 1 ;   %Overlap
 
 %% Trade-Off
 %C = 5;
-TF.C  = 10;
-TF.C1 = 100;       %TrainLoss
-TF.C2 = 0;      %Syn
-TF.C3 = 0.1;      %Prox
+TF.C  = 0.01;
+TF.C1 = 1000;       %TrainLoss
+TF.C2 = 0.01;      %Syn
+TF.C3 = 0.01;      %Prox
 
 %% Opt
 Opt.eta  = 0.03;      %LearningRate
-Opt.beta = 0.001;         %Hyper 
-Opt.N = 1;
+Opt.beta = 0.01;         %Hyper 
+Opt.N = 2;
 %gamma = 0.00001;
-gamma = 0.05;
+gamma = 0.025;
 
 %Reduce kernel subset size
-SizeoRatiofReducedset = 0.005;
+SizeoRatiofReducedset = 0.0075;
 
 profile on
-[Result,Model] = Train_SN(filename,TF,Opt,Set,SizeoRatiofReducedset,gamma)
+[Result,Model] = Train_all(filename,method,TF,Opt,Set,SizeoRatiofReducedset,gamma)
 profile viewer
 Kernelprint(Model.RS,Model.RS,gamma);
 %}
@@ -300,7 +300,7 @@ Kernelprint(Model.RS,Model.RS,gamma);
 
 
 %Data set : w3a - Adadelta
-%
+%{
 filename = 'w3a';
 method = 2;
 %% Set
