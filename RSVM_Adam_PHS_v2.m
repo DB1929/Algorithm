@@ -1,8 +1,9 @@
-function [Model,Report] = RSVM_SN_PHS(Model,TF,Opt,Set,Inst,Label)
+function [Model,Report] = RSVM_Adam_PHS_v2(Model,TF,Opt,Set,Inst,Label)
 %% ========================================================================
 % JIAN-PING SYU
-% Stochastic Newton with (1)Proximal Model (2)Hypergradient (3)Synthetic Data
+% Adam with (1)Proximal Model (2)Hypergradient (3)Synthetic Data
 %           Reduce Kernel Support Vector Machine
+%           ! v2 Renew the Synthetic Data 
 % Read Me ================================================================%
 % Inputs :
 %        (1) Model        : Initial of the Model
@@ -19,6 +20,9 @@ function [Model,Report] = RSVM_SN_PHS(Model,TF,Opt,Set,Inst,Label)
 %        (3) Opt          : Parameter of optimization algorithm
 %            Opt.eta      : Learning rate
 %            Opt.beta     : Parameter of Hypergradient 
+%            Opt.d1       : Decay rate in Adam 
+%            Opt.d2       : Decay rate in Adam 
+%            Opt.e        : Adam parameter in RMS function
 %            Opt.N        : 0-> Newton step 1->Armijo 2-> Hypergradient 
 %                           3-> Fixed eta
 %
@@ -71,6 +75,9 @@ w       = Model.W(:,1);                      %Initial the weight
 %Model.W = zeros(rs1,Set.Epoch);
 eta     = Opt.eta;
 
+% Adam initial
+E_g = 0;
+E_gg = 0;
 %Report
 Report.time = zeros(Set.Epoch,1);
 Report.loss = zeros(Set.Epoch,PartNum);
@@ -90,7 +97,7 @@ for round = 1:Set.Epoch
     else
        w = Model.W(:,round-1); 
     end
-    ind_end = 0;
+    ind_end = 0;    
     %Overlapping setting
     zKTInst_pre = [];
     miniTLabel_pre = [];
@@ -186,121 +193,91 @@ for round = 1:Set.Epoch
                 Syn_l_n   = length(Syn_ind_n);
                 % Generate the Synthestic data
                 C4 = 0.2;
-                if Syn_l_p>0
-                    %Syndata_P = (1-ones(Syn_l_p,1)*s_p).*zKTInst(Syn_ind_p,:) +  ones(Syn_l_p,1)*(s_p.*m_p);
-                    Syndata_P = (1-C4)*zKTInst(Syn_ind_p,:) +  ones(Syn_l_p,1)*(C4*m_p);
-                    loss_P    = 1 - (Syndata_P*w(1:nDim)+w(end));
+                if Syn_l_p>0 && Syn_l_n>0
+                    %Syndata_P = (1-C4)*zKTInst(Syn_ind_p,:)+ones(Syn_l_p,1)*(C4*m_p);
+                    %Syndata_N = (1-C4)*zKTInst(Syn_ind_n,:)+ones(Syn_l_n,1)*(C4*m_n);
+                    SynData  = [(1-C4)*zKTInst(Syn_ind_p,:)+ones(Syn_l_p,1)*(C4*m_p);(1-C4)*zKTInst(Syn_ind_n,:)+ones(Syn_l_n,1)*(C4*m_n)];
+                    SynLabel = [ones(Syn_l_p,1);-ones(Syn_l_n,1)];
+                    loss_syn = 1 - SynLabel.*(SynData*w(1:nDim)+w(end));
+                elseif Syn_l_p>0 && Syn_l_n == 0
+                    SynData  = (1-C4)*zKTInst(Syn_ind_p,:)+ones(Syn_l_p,1)*(C4*m_p);
+                    SynLabel = ones(Syn_l_p,1);
+                    loss_syn = 1 - SynLabel.*(SynData*w(1:nDim)+w(end));
+                elseif Syn_l_p == 0 && Syn_l_n>0
+                    SynData  = (1-C4)*zKTInst(Syn_ind_n,:)+ones(Syn_l_n,1)*(C4*m_n);
+                    SynLabel = -ones(Syn_l_n,1);
+                    loss_syn = 1 - SynLabel.*(SynData*w(1:nDim)+w(end));
                 else
-                   Syndata_P  = zeros(1,nDim); 
-                   loss_P     = 0;
-                end
-                if Syn_l_n>0
-                    %Syndata_N = (1-ones(Syn_l_n,1)*s_n).*zKTInst(Syn_ind_n,:) +  ones(Syn_l_n,1)*(s_p.*m_n);
-                    Syndata_N = (1-C4)*zKTInst(Syn_ind_n,:) +  ones(Syn_l_n,1)*(C4*m_n);
-                    loss_N    = 1 - (Syndata_N*w(1:nDim)+w(end));
-                else
-                    Syndata_N = zeros(1,nDim);
-                    loss_N    = 0;
+                    SynData  = [];
+                    SynLabel = [];
+                    loss_syn = 0;
                 end
                 % Passive
-                Syn_Ih_P = find(loss_P > 0);
-                Syn_Ih_N = find(loss_N > 0);
-                Syn_nIh  = length(Syn_Ih_P)+length(Syn_Ih_N);
+                Syn_Ih = find(loss_syn > 0);
+                Syn_nIh  = length(Syn_Ih);
                 % Gradient of Synthestic data
-                if isempty(Syn_Ih_N) && isempty(Syn_Ih_P)
+                if Syn_nIh == 0
                  grad_syn_w = 0;
                  grad_syn_b = 0;
-                elseif isempty(Syn_Ih_N)
-                 %grad_syn_w = 2*TF.C2*Syndata_P(Syn_Ih_P,:)'*loss_P(Syn_Ih_P)/Syn_nIh;
-                 %grad_syn_b = 2*TF.C2*sum(loss_P(Syn_Ih_P))/Syn_nIh;
-                 grad_syn_w = 2*TF.C2*Syndata_P(Syn_Ih_P,:)'*loss_P(Syn_Ih_P);
-                 grad_syn_b = 2*TF.C2*sum(loss_P(Syn_Ih_P));
-                elseif isempty(Syn_Ih_P)
-                 %grad_syn_w = 2*TF.C2*Syndata_N(Syn_Ih_N,:)'*loss_N(Syn_Ih_N)*(-1)/Syn_nIh;
-                 %grad_syn_b = 2*TF.C2*sum(loss_N(Syn_Ih_N)*(-1))/Syn_nIh; 
-                 grad_syn_w = 2*TF.C2*Syndata_N(Syn_Ih_N,:)'*loss_N(Syn_Ih_N)*(-1);
-                 grad_syn_b = 2*TF.C2*sum(loss_N(Syn_Ih_N)*(-1)); 
-                else               
-                 %grad_syn_w = 2*TF.C2*(Syndata_P(Syn_Ih_P,:)'*loss_P(Syn_Ih_P)+ Syndata_N(Syn_Ih_N,:)'*loss_N(Syn_Ih_N)*(-1))/Syn_nIh;
-                 %grad_syn_b = 2*TF.C2*(sum(loss_P(Syn_Ih_P))+sum(loss_N(Syn_Ih_N)*(-1)))/Syn_nIh;
-                 grad_syn_w = 2*TF.C2*(Syndata_P(Syn_Ih_P,:)'*loss_P(Syn_Ih_P)+ Syndata_N(Syn_Ih_N,:)'*loss_N(Syn_Ih_N)*(-1));
-                 grad_syn_b = 2*TF.C2*(sum(loss_P(Syn_Ih_P))+sum(loss_N(Syn_Ih_N)*(-1)));
+                else
+                 grad_syn_w = 2*TF.C2*SynData(Syn_Ih,:)'*loss_syn(Syn_Ih);
+                 grad_syn_b = 2*TF.C2*sum(loss(Syn_Ih)); 
                 end
         else
             grad_syn_w = 0;
             grad_syn_b = 0;
         end
-                
-         %% Stochastic Newton Method update                           
+                        
+         %% Adam update                           
                % Final gradient
-                %gradw_part = loss(Ih).*miniTLabel(Ih)/nIh;
+                %gradw_part = loss(Ih).*miniTLabel(Ih)/nIh;                
                 gradw_part = loss(Ih).*miniTLabel(Ih);
                 grad_w = (TF.C*w(1:end-1) - grad_prox_w - grad_syn_w - 2*TF.C1*zKTInst(Ih,:)'*(gradw_part) ) ;
                 grad_b = (TF.C*w(end) - grad_prox_b - grad_syn_b - 2*TF.C1*sum(gradw_part)); 
  
                 grad_final = [grad_w;grad_b];
+                % Adam Update
+                E_g  = Opt.d1 * E_g  + (1-Opt.d1)*grad_final;
+                E_gg = Opt.d2 * E_gg + (1-Opt.d2)*(grad_final.*grad_final);
+                tt = (round-1)*PartNum + part;
+                direct =  (E_g/(1-Opt.d1^tt))./((E_gg/(1-Opt.d2^tt)+Opt.e).^(0.5));
 
-               % Hessian matrix
-               % w = w - eta * (g/C1 - 2/(C1^2) * Q' * (I+2QQ')^(-1) * Q * g))
-               % Q:(batch size + synthestic data size) X (feature dimension + 1)
-               
-                if TF.C2>0 && (~isempty(Syn_Ih_N) && ~isempty(Syn_Ih_P))
-                   %Q = [zKTInst(Ih,:)*(TF.C1/nIh),ones(nIh,1)*(TF.C1/nIh);Syndata_P(Syn_Ih_P,:)*(TF.C2/Syn_nIh),ones(length(Syn_Ih_P),1)*(TF.C2/Syn_nIh);Syndata_N(Syn_Ih_N,:)*(TF.C2/Syn_nIh),ones(length(Syn_Ih_N),1)*(TF.C2/Syn_nIh)]; 
-                   %Nt_direct = grad_final/TF.C - 2*(1/(TF.C))*Q'*((eye(nIh+Syn_nIh)+2*Q*Q')\(Q*grad_final));
-                   Q = [zKTInst(Ih,:)*(TF.C1),ones(nIh,1)*(TF.C1);Syndata_P(Syn_Ih_P,:)*(TF.C2),ones(length(Syn_Ih_P),1)*(TF.C2);Syndata_N(Syn_Ih_N,:)*(TF.C2),ones(length(Syn_Ih_N),1)*(TF.C2)]; 
-                   Nt_direct = grad_final/TF.C - 2*(1/(TF.C))*Q'*((eye(nIh+Syn_nIh)+2*Q*Q')\(Q*grad_final));
-                else
-                   %Q = [zKTInst(Ih,:)*(TF.C1/nIh),ones(nIh,1)*(TF.C1/nIh)];
-                   %Nt_direct = grad_final/TF.C - 2*(1/(TF.C))*Q'*((eye(nIh)+2*Q*Q')\(Q*grad_final));
-                   Q = [zKTInst(Ih,:)*(TF.C1),ones(nIh,1)*(TF.C1)];                    
-                   Nt_direct = grad_final/TF.C - 2*(1/(TF.C))*Q'*((eye(nIh)+2*Q*Q')\(Q*grad_final));
-                end
-               %% Step size
+         %% Step size
                if Opt.N == 0
-                  % Newton Step (stepsize == 1)
-                   w = w - Nt_direct;
+                  %  (stepsize == 1)
+                   w = w - direct;
                    Report.eta(round,part) = 1; 
-
                elseif Opt.N == 1
                     %Optional : Armijo condition (for stepsize)
                     if  (grad_final'*grad_final/nDim > 1E-5)
-                        if TF.C2>0
-                            eta = Armijo(zKTInst,miniTLabel,[Syndata_P;Syndata_N],[ones(Syn_l_p,1);-1*ones(Syn_l_n,1)],w,[wp;bp],TF,Nt_direct,grad_final);
+                        if TF.C2>0 
+                            eta = Armijo(zKTInst,miniTLabel,SynData,SynLabel,w,[wp;bp],TF,direct,grad_final);
                         else
-                            eta = Armijo(zKTInst,miniTLabel,0,0,w,[wp;bp],TF,Nt_direct,grad_final);
+                            eta = Armijo(zKTInst,miniTLabel,0,0,w,[wp;bp],TF,direct,grad_final);
                         end
-                        w = w - eta * Nt_direct;
-                        Report.eta(round,part) = eta;   
-                        %{
-                        % Check the First Order Opt. condition
-                        % stepsize = 1; % The default stepsize is 1
-                        obj1 = objf(zKTInst,miniTLabel,[Syndata_P;Syndata_N],[ones(Syn_l_p,1);-1*ones(Syn_l_n,1)],w,[wp;bp],TF);
-                        w2 = w - Nt_direct ;
-                        obj2 = objf(zKTInst,miniTLabel,[Syndata_P;Syndata_N],[ones(Syn_l_p,1);-1*ones(Syn_l_n,1)],w2,[wp;bp],TF);
-                        
-                        if (obj1 - obj2) <= 1E-8
-                            % Use the Armijo's rule
-                            gap = Nt_direct'*grad_final; % Compute the gap
-                            % Find the step size & Update to the new point
-                            stepsize = armijo(zKTInst,miniTLabel,[Syndata_P;Syndata_N],[ones(Syn_l_p,1);-1*ones(Syn_l_n,1)],w,[wp;bp],TF,Nt_direct,gap,obj1);
-                            w = w - stepsize * Nt_direct;
-                        else
-                            % Use the Newton method
-                            w = w2;
-                        end
-                        %}
+                        w = w - eta * direct;
+                        Report.eta(round,part) = eta;    
                     end
                elseif Opt.N == 2
                    % Hypergradient
-                   H          = Hyper_grad' * grad_final/(Hyper_grad' * Hyper_grad * grad_final' * grad_final+eps)^(1/2); 
+                   H          = Hyper_grad' * grad_final/(Hyper_grad' * Hyper_grad * grad_final' * grad_final+eps)^(1/2);
                    eta        = eta + Opt.beta * H;
-                   Hyper_grad = Nt_direct;
+                   Hyper_grad = direct;
                    Report.eta(round,part) = eta;                   
-                   w = w - eta.*Nt_direct; 
+                   w = w - eta.* direct; 
                elseif Opt.N == 3
-                   w = w - eta  *Nt_direct;
+                   w = w - eta * direct;
                    Report.eta(round,part) = eta;   
-               end % Stepsize end           
+               end % Stepsize end                           
+               %{
+               % Hypergradient
+               H          = Hyper_grad' * grad_final/(Hyper_grad' * Hyper_grad * grad_final' * grad_final+eps)^(1/2);
+               eta        = eta + Opt.beta * H;
+               Hyper_grad = grad_final;
+               Report.eta(round,part) = eta;
+              % SGD algorithm 
+               w = w - eta.*grad_final; 
+                %}
               
         end %Update Part end
         
@@ -397,38 +374,6 @@ else   %reduced kernel, or kernel matrix for test data
 end
 end
 
-%{
-function stepsize = armijo(Tdata,Tlabel,Tdata_syn,Tlabel_syn,w,wp,TF,direct,gap,obj1)
-%% ========================================================================
-% Armijo Stepsize
-%
-% Inputs
-%   w1, b1: Current model
-%   C     : Weight parameter
-%   gap   : Defined in ssvm code
-%   obj1  : The object function value of current model
-%   diff  : The difference of objective function values between current
-%           and next model
-%==========================================================================
-%%
-diff=0;
-temp=0.5; % we start to test with setpsize=0.5
-count = 1;
-while diff  < -0.05*temp*gap
-    temp = 0.5*temp;
-    w2 = w - temp*direct;
-    obj2 = objf(Tdata,Tlabel,Tdata_syn,Tlabel_syn,w2,wp,TF);
-    diff = obj1 - obj2;
-    count = count+1;
-    if (count>20)
-        break;
-    end
-end;
-
-stepsize = temp;
-end
-%}
-
 function stepsize = Armijo(Tdata,Tlabel,Tdata_syn,Tlabel_syn,w,wp,TF,direct,grad)
 %% ========================================================================
 % Armijo Stepsize
@@ -466,7 +411,7 @@ obj2 = objf(Tdata,Tlabel,Tdata_syn,Tlabel_syn,w2,wp,TF);
         end;
         stepsize = temp; 
     else
-        stepsize = 1;
+        stepsize = 0.1;
     end
 
 end
@@ -487,5 +432,3 @@ else
 end
     value = 0.5*TF.C*(w'*w) + TF.C1*(v'*v)/length(v) - TF.C3*w'*wp + TF.C2*(v_s'*v_s)/length(v_s);
 end
-
-

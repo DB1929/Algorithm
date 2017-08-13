@@ -106,7 +106,7 @@ Kernelprint(Model.RS,Model.RS,gamma);
 
 
 %Data set : svmguide1 -SN
-%
+%{
 filename = 'svmguide1';
 method = 1;
 %% Set
@@ -116,15 +116,15 @@ Set.Overlap   = 1 ;   %Overlap
 
 %% Trade-Off
 %C = 5;
-TF.C  = 0.1;
-TF.C1 = 1000;       %TrainLoss
+TF.C  = 1;
+TF.C1 = 100;       %TrainLoss
 TF.C2 = 0;      %Syn
-TF.C3 = 0.1;      %Prox
+TF.C3 = 0.01;      %Prox
 
 %% Opt
-Opt.eta  = 0.03;      %LearningRate
-Opt.beta = 0.01;         %Hyper 
-Opt.N = 2;
+Opt.eta  = 0.3;      %LearningRate
+Opt.beta = 0.1;         %Hyper 
+Opt.N = 1;
 %gamma = 0.00001;
 gamma = 1e-3;
 
@@ -300,7 +300,7 @@ Kernelprint(Model.RS,Model.RS,gamma);
 
 
 %Data set : w3a - Adadelta
-%{
+%
 filename = 'w3a';
 method = 2;
 %% Set
@@ -312,7 +312,7 @@ Set.Overlap   = 1 ;   %Overlap
 %C = 5;
 TF.C  = 100;
 TF.C1 = 100000;       %TrainLoss
-TF.C2 = 0;      %Syn
+TF.C2 = 0.1;      %Syn
 TF.C3 = 1;      %Prox
 
 %% Opt
@@ -384,13 +384,13 @@ Set.Overlap   = 1 ;   %Overlap
 %C = 5;
 TF.C  = 0.01;
 TF.C1 = 100;       %TrainLoss
-TF.C2 = 0;      %Syn
+TF.C2 = 0.1;      %Syn
 TF.C3 = 0.01;      %Prox
 
 %% Opt
 Opt.eta  = 0.001;      %LearningRate
 Opt.beta = 0.1;         %Hyper 
-Opt.N = 2; 
+Opt.N = 1; 
 Opt.d1 = 0.9;
 Opt.d2 = 0.999;
 Opt.e = 1e-8;

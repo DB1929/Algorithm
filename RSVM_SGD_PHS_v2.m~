@@ -1,4 +1,4 @@
-function [Model,Report] = RSVM_SGD_PHS(Model,TF,Opt,Set,Inst,Label)
+function [Model,Report] = RSVM_SGD_PHS_v2(Model,TF,Opt,Set,Inst,Label)
 %% ========================================================================
 % JIAN-PING SYU
 % SGD with (1)Proximal Model (2)Hypergradient (3)Synthetic Data
@@ -186,45 +186,35 @@ for round = 1:Set.Epoch
                 Syn_l_n   = length(Syn_ind_n);
                 % Generate the Synthestic data
                 C4 = 0.2;
-                if Syn_l_p>0
-                    %Syndata_P = (1-ones(Syn_l_p,1)*s_p).*zKTInst(Syn_ind_p,:) +  ones(Syn_l_p,1)*(s_p.*m_p);
-                    Syndata_P = (1-C4)*zKTInst(Syn_ind_p,:) +  ones(Syn_l_p,1)*(C4*m_p);
-                    loss_P    = 1 - (Syndata_P*w(1:nDim)+w(end));
+                if Syn_l_p>0 && Syn_l_n>0
+                    %Syndata_P = (1-C4)*zKTInst(Syn_ind_p,:)+ones(Syn_l_p,1)*(C4*m_p);
+                    %Syndata_N = (1-C4)*zKTInst(Syn_ind_n,:)+ones(Syn_l_n,1)*(C4*m_n);
+                    Syndata  = [(1-C4)*zKTInst(Syn_ind_p,:)+ones(Syn_l_p,1)*(C4*m_p);(1-C4)*zKTInst(Syn_ind_n,:)+ones(Syn_l_n,1)*(C4*m_n)];
+                    SynLabel = [ones(Syn_l_p,1);-ones(Syn_l_n,1)];
+                    loss_syn = 1 - SynLabel.*(Syndata*w(1:nDim)+w(end));
+                elseif Syn_l_p>0 && Syn_l_n == 0
+                    Syndata  = (1-C4)*zKTInst(Syn_ind_p,:)+ones(Syn_l_p,1)*(C4*m_p);
+                    SynLabel = ones(Syn_l_p,1);
+                    loss_syn = 1 - SynLabel.*(Syndata*w(1:nDim)+w(end));
+                elseif Syn_l_p == 0 && Syn_l_n>0
+                    Syndata  = (1-C4)*zKTInst(Syn_ind_n,:)+ones(Syn_l_n,1)*(C4*m_n);
+                    SynLabel = -ones(Syn_l_n,1);
+                    loss_syn = 1 - SynLabel.*(Syndata*w(1:nDim)+w(end));
                 else
-                   Syndata_P  = zeros(1,nDim);  
-                   loss_P     = 0;
-                end
-                if Syn_l_n>0
-                    %Syndata_N = (1-ones(Syn_l_n,1)*s_n).*zKTInst(Syn_ind_n,:) +  ones(Syn_l_n,1)*(s_p.*m_n);
-                    Syndata_N = (1-C4)*zKTInst(Syn_ind_n,:) +  ones(Syn_l_n,1)*(C4*m_n);
-                    loss_N    = 1 - (Syndata_N*w(1:nDim)+w(end));
-                else
-                    Syndata_N  = zeros(1,nDim); 
-                    loss_N    = 0;
+                    Syndata  = [];
+                    SynLabel = [];
+                    loss_syn = 0;
                 end
                 % Passive
-                Syn_Ih_P = find(loss_P > 0);
-                Syn_Ih_N = find(loss_N > 0);
-                Syn_nIh  = length(Syn_Ih_P)+length(Syn_Ih_N);
+                Syn_Ih = find(loss_syn > 0);
+                Syn_nIh  = length(Syn_Ih);
                 % Gradient of Synthestic data
-                if isempty(Syn_Ih_N) && isempty(Syn_Ih_P)
+                if Syn_nIh == 0
                  grad_syn_w = 0;
                  grad_syn_b = 0;
-                elseif isempty(Syn_Ih_N)
-                 %grad_syn_w = 2*TF.C2*Syndata_P(Syn_Ih_P,:)'*loss_P(Syn_Ih_P)/Syn_nIh;
-                 %grad_syn_b = 2*TF.C2*sum(loss_P(Syn_Ih_P))/Syn_nIh;
-                 grad_syn_w = 2*TF.C2*Syndata_P(Syn_Ih_P,:)'*loss_P(Syn_Ih_P);
-                 grad_syn_b = 2*TF.C2*sum(loss_P(Syn_Ih_P));
-                elseif isempty(Syn_Ih_P)
-                 %grad_syn_w = 2*TF.C2*Syndata_N(Syn_Ih_N,:)'*loss_N(Syn_Ih_N)*(-1)/Syn_nIh;
-                 %grad_syn_b = 2*TF.C2*sum(loss_N(Syn_Ih_N)*(-1))/Syn_nIh; 
-                 grad_syn_w = 2*TF.C2*Syndata_N(Syn_Ih_N,:)'*loss_N(Syn_Ih_N)*(-1);
-                 grad_syn_b = 2*TF.C2*sum(loss_N(Syn_Ih_N)*(-1)); 
                 else
-                 %grad_syn_w = 2*TF.C2*(Syndata_P(Syn_Ih_P,:)'*loss_P(Syn_Ih_P)+ Syndata_N(Syn_Ih_N,:)'*loss_N(Syn_Ih_N)*(-1))/Syn_nIh;
-                 %grad_syn_b = 2*TF.C2*(sum(loss_P(Syn_Ih_P))+sum(loss_N(Syn_Ih_N)*(-1)))/Syn_nIh;
-                 grad_syn_w = 2*TF.C2*(Syndata_P(Syn_Ih_P,:)'*loss_P(Syn_Ih_P)+ Syndata_N(Syn_Ih_N,:)'*loss_N(Syn_Ih_N)*(-1));
-                 grad_syn_b = 2*TF.C2*(sum(loss_P(Syn_Ih_P))+sum(loss_N(Syn_Ih_N)*(-1)));
+                 grad_syn_w = 2*TF.C2*Syndata(Syn_Ih,:)'*loss_syn(Syn_Ih);
+                 grad_syn_b = 2*TF.C2*sum(loss(Syn_Ih)); 
                 end
         else
             grad_syn_w = 0;
