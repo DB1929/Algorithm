@@ -76,7 +76,7 @@ eta     = Opt.eta;
 
 % Adadelta initial
 E_gg = 0;
-E_tt = 0;
+E_xx = 0;
 %Report
 Report.time = zeros(Set.Epoch,1);
 Report.loss = zeros(Set.Epoch,PartNum);
@@ -225,8 +225,8 @@ for round = 1:Set.Epoch
     
                 % Adadelta Update
                 E_gg = Opt.delta * E_gg + (1-Opt.delta)*(grad_final.*grad_final);
-                RMS_gg = (E_gg + Opt.e)^(1/2);
-                RMS_xx = (E_xx + Opt.e)^(1/2);
+                RMS_gg = (E_gg + Opt.e).^(1/2);
+                RMS_xx = (E_xx + Opt.e).^(1/2);
                 direct = -1 * (RMS_xx./RMS_gg) .* grad_final;
                 E_xx = Opt.delta * E_xx + (1-Opt.delta) * direct.*direct;
                 direct = -1*direct;
