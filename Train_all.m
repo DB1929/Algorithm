@@ -61,7 +61,9 @@ elseif method == 2
     [Model,Result.train] = RSVM_Adadelta_PHS_v2(Model,TF,Opt,Set,TInst,TLabel);
 elseif method == 3
     %[Model,Result.train] = RSVM_Adam_PHS(Model,TF,Opt,Set,TInst,TLabel);
-    [Model,Result.train] = RSVM_Adam_PHS_v2(Model,TF,Opt,Set,TInst,TLabel);    
+    [Model,Result.train] = RSVM_Adam_PHS_v2(Model,TF,Opt,Set,TInst,TLabel);  
+elseif method == 4
+    [Model,Result.train] = RSVM_PSA_PHS_v2(Model,TF,Opt,Set,TInst,TLabel);
 end
 
 %% Testing

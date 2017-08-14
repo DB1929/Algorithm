@@ -36,7 +36,7 @@ Kernelprint(Model.RS,Model.RS,gamma);
 %}
 
 %Data set : w3a 
-%
+%{
 filename = 'w3a';
 method = 0;
 %% Set
@@ -399,6 +399,87 @@ gamma = 0.075;
 
 %Reduce kernel subset size
 SizeoRatiofReducedset = 0.0625;
+
+profile on
+[Result,Model] = Train_all(filename,method,TF,Opt,Set,SizeoRatiofReducedset,gamma)
+profile viewer
+Kernelprint(Model.RS,Model.RS,gamma);
+%}
+
+
+%Data set : svmguide1 -PSA
+%{
+filename = 'svmguide1';
+method = 4;
+%% Set
+Set.Minibatch = 100;   %BatchSize
+Set.Epoch     = 10;   %Epoch
+Set.Overlap   = 1 ;   %Overlap
+
+%% Trade-Off
+%C = 5;
+TF.C  = 1;
+TF.C1 = 100;       %TrainLoss
+TF.C2 = 0.1;      %Syn
+TF.C3 = 0.1;      %Prox
+
+%% Opt
+Opt.eta  = 0.3;      %LearningRate
+Opt.beta = 0.1;         %Hyper 
+Opt.N = 2; 
+Opt.psa.eta  = 0.0001;
+Opt.psa.b    = 10;
+Opt.psa.alpha= 0.9999;
+Opt.psa.beta = 0.99;
+Opt.psa.kai  = 0.9;
+
+
+
+%gamma = 0.00001;
+gamma = 1e-3;
+
+%Reduce kernel subset size
+SizeoRatiofReducedset = 0.05;
+
+profile on
+[Result,Model] = Train_all(filename,method,TF,Opt,Set,SizeoRatiofReducedset,gamma)
+profile viewer
+Kernelprint(Model.RS,Model.RS,gamma);
+%}
+
+%Data set : w3a -PSA
+%{
+filename = 'w3a';
+method = 4;
+%% Set
+Set.Minibatch = 100;   %BatchSize
+Set.Epoch     = 10;   %Epoch
+Set.Overlap   = 1 ;   %Overlap
+
+%% Trade-Off
+%C = 5;
+TF.C  = 0.01;
+TF.C1 = 100;       %TrainLoss
+TF.C2 = 0;      %Syn
+TF.C3 = 0.1;      %Prox
+
+%% Opt
+Opt.eta  = 0.3;      %LearningRate
+Opt.beta = 0.1;         %Hyper 
+Opt.N = 0; 
+Opt.psa.eta  = 0.00001;
+Opt.psa.b    = 1;
+Opt.psa.alpha= 0.9999;
+Opt.psa.beta = 0.99;
+Opt.psa.kai  = 0.9;
+
+
+
+%gamma = 0.00001;
+gamma =  0.075;
+
+%Reduce kernel subset size
+SizeoRatiofReducedset = 0.05;
 
 profile on
 [Result,Model] = Train_all(filename,method,TF,Opt,Set,SizeoRatiofReducedset,gamma)
