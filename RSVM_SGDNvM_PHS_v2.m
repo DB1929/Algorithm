@@ -1,7 +1,7 @@
-function [Model,Report] = RSVM_SGDM_PHS_v2(Model,TF,Opt,Set,Inst,Label)
+function [Model,Report] = RSVM_SGDNvM_PHS_v2(Model,TF,Opt,Set,Inst,Label)
 %% ========================================================================
 % JIAN-PING SYU
-% SGD with momentum with 
+% SGD with  Nesterov momentum 
 %           (1)Proximal Model (2)Hypergradient (3)Synthetic Data
 %           Reduce Kernel Support Vector Machine
 %           ! v2 Renew the Synthetic Data 
@@ -20,8 +20,8 @@ function [Model,Report] = RSVM_SGDM_PHS_v2(Model,TF,Opt,Set,Inst,Label)
 %
 %        (3) Opt          : Parameter of optimization algorithm
 %            Opt.eta      : Learning rate
-%            Opt.beta     : Parameter of Hypergradient 
-%            Opt.mmt.mu   : Parameter of momentum
+%            Opt.beta     : Parameter of Hypergradient
+%            Opt.Nmmt.mu  : Parameter of Nesterov momentum
 %            Opt.N        : Type of Learning rate choose
 %                           0-> Default step 1
 %                           1-> Armijo 
@@ -76,6 +76,9 @@ n_n = 0;
 w       = Model.W(:,1);                      %Initial the weight
 %Model.W = zeros(rs1,Set.Epoch);
 eta     = Opt.eta;
+% Nesterov momentum initial
+Nmmt_v = 0;
+%Nmmt_w = w;
 
 %Report
 Report.time = zeros(Set.Epoch,1);
@@ -144,7 +147,9 @@ for round = 1:Set.Epoch
             miniTLabel = [miniTLabel ; miniTLabel_pre];
             counter_vector = [zeros(miniInstNum,1) ; counter_vector_pre];
         end
-        
+        %% Netestrov update part-1
+        Nmmt_w = w;
+        w = w - eta*Opt.Nmmt.mu*(-Nmmt_v); 
         %% Passive Part
         loss = 1 - miniTLabel.*(zKTInst*w(1:nDim)+w(end));   % loss vector          
         Ih = find(loss > 0);                                 % update model by using misclassified instance only.
@@ -227,7 +232,7 @@ for round = 1:Set.Epoch
             grad_syn_b = 0;
         end
                 
-         %% SGD with momentum update                           
+         %% SGD with Nesterov momentum update                           
                % Final gradient
                 %gradw_part = loss(Ih).*miniTLabel(Ih)/nIh;
                 gradw_part = loss(Ih).*miniTLabel(Ih);
@@ -235,9 +240,10 @@ for round = 1:Set.Epoch
                 grad_b = (TF.C*w(end) - grad_prox_b - grad_syn_b - 2*TF.C1*sum(gradw_part)); 
  
                 grad_final = [grad_w;grad_b];
-                % Momentum update
-                mmt_v = Opt.mmt.mu*mmt_v -
-                direct = 
+               %% Netestrov update part-2
+                Nmmt_v = Opt.Nmmt.mu*Nmmt_v - eta *grad_final;                   
+                direct = -1*Nmmt_v;
+                w = Nmmt_w;
          %% Step size
                if Opt.N == 0
                   %  (stepsize == 1)

@@ -126,6 +126,11 @@ for tt = 1:TrainTimes
         % Opt.mmt.mu   : Parameter of momentum
         [Model,Result.train] = RSVM_SGDM_PHS_v2(Model,TF,Opt,Set,TInst,TLabel);
         method = 'SGDM';
+    elseif Method == 2
+       %% Opt.Nmmt
+        % Opt.Nmmt.mu  : Parameter of Nesterov momentum
+        [Model,Result.train] = RSVM_SGDNvM_PHS_v2(Model,TF,Opt,Set,TInst,TLabel);
+        method = 'SGDNvM';
     elseif Method == 3 
         %[Model,Result.train] = RSVM_SN_PHS(Model,TF,Opt,Set,TInst,TLabel);
         [Model,Result.train] = RSVM_SN_PHS_v2(Model,TF,Opt,Set,TInst,TLabel);

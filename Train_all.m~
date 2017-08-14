@@ -119,26 +119,32 @@ for tt = 1:TrainTimes
     Model.W = rand(SizeofRS+1,Set.Epoch);
     if Method == 0
         %[Model,Result.train] = RSVM_SGD_PHS(Model,TF,Opt,Set,TInst,TLabel);
-         [Model,Result.train] = RSVM_SGD_PHS_v2(Model,TF,Opt,Set,TInst,TLabel);
-         method = 'SGD';
+        [Model,Result.train] = RSVM_SGD_PHS_v2(Model,TF,Opt,Set,TInst,TLabel);
+        method = 'SGD';
     elseif Method == 1
+       %% Opt.mmt
+        % Opt.mmt.mu   : Parameter of momentum
         [Model,Result.train] = RSVM_SGDM_PHS_v2(Model,TF,Opt,Set,TInst,TLabel);
         method = 'SGDM';
+    elseif Method == 2
+        
     elseif Method == 3 
         %[Model,Result.train] = RSVM_SN_PHS(Model,TF,Opt,Set,TInst,TLabel);
         [Model,Result.train] = RSVM_SN_PHS_v2(Model,TF,Opt,Set,TInst,TLabel);
-        method = 'SGD';
+        method = 'SN';
     elseif Method == 4
        %% Opt.ada
         % Opt.ada.delta: Decay rate in Adadelta algorithm
         % Opt.ada.e    : Adadelta parameter in RMS function
         [Model,Result.train] = RSVM_Adadelta_PHS_v2(Model,TF,Opt,Set,TInst,TLabel);
+        method = 'Adadelta';
     elseif Method == 5
        %% Opt.adam
         % Opt.adam.d1  : Decay rate in Adam 
         % Opt.adam.d2  : Decay rate in Adam 
         % Opt.adam.e   : Adam parameter in RMS function
-        [Model,Result.train] = RSVM_Adam_PHS_v2(Model,TF,Opt,Set,TInst,TLabel);  
+        [Model,Result.train] = RSVM_Adam_PHS_v2(Model,TF,Opt,Set,TInst,TLabel); 
+        method = 'Adam';
     elseif Method == 6
        %% Opt.psa
         % Opt.psa.eta  : Initial of  PSA vector
@@ -147,6 +153,7 @@ for tt = 1:TrainTimes
         % Opt.psa.beta : PSA bounded parameter
         % Opt.psa.kai  : PSA bounded parameter
         [Model,Result.train] = RSVM_PSA_PHS_v2(Model,TF,Opt,Set,TInst,TLabel);
+        method = 'PSA';
     end
     if TrainTimes > 1
         WW(:,tt) = Model.W; 
