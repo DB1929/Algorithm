@@ -1,8 +1,9 @@
-function [Model,Report] = RSVM_SGD_PHS_v2(Model,TF,Opt,Set,Inst,Label)
+function [Model,Report] = RSVM_Adadelta_PHS_v2(Model,TF,Opt,Set,Inst,Label)
 %% ========================================================================
 % JIAN-PING SYU
-% SGD with (1)Proximal Model (2)Hypergradient (3)Synthetic Data
+% Adadelta with (1)Proximal Model (2)Hypergradient (3)Synthetic Data
 %           Reduce Kernel Support Vector Machine
+%           ! v2 Renew the Synthetic Data 
 % Read Me ================================================================%
 % Inputs :
 %        (1) Model        : Initial of the Model
@@ -14,12 +15,18 @@ function [Model,Report] = RSVM_SGD_PHS_v2(Model,TF,Opt,Set,Inst,Label)
 %            TF.C         : Trade-off with Regularization
 %            TF.C1        : Trade-off with Training  data loss
 %            TF.C2        : Trade-off with Synthetic data loss
+%            TF.C2_1      : Trade-off  in  Synthetic data 
 %            TF.C3        : Trade-off with Proximal Model
 %
 %        (3) Opt          : Parameter of optimization algorithm
 %            Opt.eta      : Learning rate
 %            Opt.beta     : Parameter of Hypergradient 
-%            Opt.N        : 0-> Newton step 1->Armijo 2-> Hypergradient 
+%            Opt.ada.delta: Decay rate in Adadelta algorithm
+%            Opt.ada.e    : Adadelta parameter in RMS function
+%            Opt.N        : Type of Learning rate choose
+%                           0-> Default step 1
+%                           1-> Armijo 
+%                           2-> Hypergradient 
 %                           3-> Fixed eta
 %
 %        (4) Set          : Setting the learning.
@@ -71,6 +78,10 @@ w       = Model.W(:,1);                      %Initial the weight
 %Model.W = zeros(rs1,Set.Epoch);
 eta     = Opt.eta;
 
+
+% Adadelta initial
+E_gg = 0;
+E_xx = 0;
 %Report
 Report.time = zeros(Set.Epoch,1);
 Report.loss = zeros(Set.Epoch,PartNum);
@@ -90,7 +101,7 @@ for round = 1:Set.Epoch
     else
        w = Model.W(:,round-1); 
     end
-    ind_end = 0;    
+    ind_end = 0;
     %Overlapping setting
     zKTInst_pre = [];
     miniTLabel_pre = [];
@@ -117,19 +128,6 @@ for round = 1:Set.Epoch
         %% Statistical Information
         if round==1
             [Stat_Info,n_p,n_n] = Stat(zKTInst,miniTLabel,Stat_Info,n_p,n_n);
-           %{
-            ind_p = find(miniTLabel>0);
-            ind_n = find(miniTLabel<0);
-            KT_p = zKTInst(ind_p,:);
-            KT_n = zKTInst(ind_n,:);
-            Stat_Info(1,:) = Stat_Info(1,:) + sum(KT_p,1);
-            Stat_Info(2,:) = Stat_Info(2,:) + sum(KT_n,1);
-            Stat_Info(3,:) = Stat_Info(3,:) + sum(KT_p.^2,1);
-            Stat_Info(4,:) = Stat_Info(4,:) + sum(KT_n.^2,1);
-            
-            n_p = n_p + size(ind_p,1);
-            n_n = n_n + size(ind_n,1);
-            %}
         end
         
         %% Overlapping Strategty
@@ -185,23 +183,23 @@ for round = 1:Set.Epoch
                 Syn_l_p   = length(Syn_ind_p);
                 Syn_l_n   = length(Syn_ind_n);
                 % Generate the Synthestic data
-                C4 = 0.2;
+                C4 = TF.C2_1;
                 if Syn_l_p>0 && Syn_l_n>0
                     %Syndata_P = (1-C4)*zKTInst(Syn_ind_p,:)+ones(Syn_l_p,1)*(C4*m_p);
                     %Syndata_N = (1-C4)*zKTInst(Syn_ind_n,:)+ones(Syn_l_n,1)*(C4*m_n);
-                    Syndata  = [(1-C4)*zKTInst(Syn_ind_p,:)+ones(Syn_l_p,1)*(C4*m_p);(1-C4)*zKTInst(Syn_ind_n,:)+ones(Syn_l_n,1)*(C4*m_n)];
+                    SynData  = [(1-C4)*zKTInst(Syn_ind_p,:)+ones(Syn_l_p,1)*(C4*m_p);(1-C4)*zKTInst(Syn_ind_n,:)+ones(Syn_l_n,1)*(C4*m_n)];
                     SynLabel = [ones(Syn_l_p,1);-ones(Syn_l_n,1)];
-                    loss_syn = 1 - SynLabel.*(Syndata*w(1:nDim)+w(end));
+                    loss_syn = 1 - SynLabel.*(SynData*w(1:nDim)+w(end));
                 elseif Syn_l_p>0 && Syn_l_n == 0
-                    Syndata  = (1-C4)*zKTInst(Syn_ind_p,:)+ones(Syn_l_p,1)*(C4*m_p);
+                    SynData  = (1-C4)*zKTInst(Syn_ind_p,:)+ones(Syn_l_p,1)*(C4*m_p);
                     SynLabel = ones(Syn_l_p,1);
-                    loss_syn = 1 - SynLabel.*(Syndata*w(1:nDim)+w(end));
+                    loss_syn = 1 - SynLabel.*(SynData*w(1:nDim)+w(end));
                 elseif Syn_l_p == 0 && Syn_l_n>0
-                    Syndata  = (1-C4)*zKTInst(Syn_ind_n,:)+ones(Syn_l_n,1)*(C4*m_n);
+                    SynData  = (1-C4)*zKTInst(Syn_ind_n,:)+ones(Syn_l_n,1)*(C4*m_n);
                     SynLabel = -ones(Syn_l_n,1);
-                    loss_syn = 1 - SynLabel.*(Syndata*w(1:nDim)+w(end));
+                    loss_syn = 1 - SynLabel.*(SynData*w(1:nDim)+w(end));
                 else
-                    Syndata  = [];
+                    SynData  = [];
                     SynLabel = [];
                     loss_syn = 0;
                 end
@@ -213,23 +211,30 @@ for round = 1:Set.Epoch
                  grad_syn_w = 0;
                  grad_syn_b = 0;
                 else
-                 grad_syn_w = 2*TF.C2*Syndata(Syn_Ih,:)'*loss_syn(Syn_Ih);
+                 grad_syn_w = 2*TF.C2*SynData(Syn_Ih,:)'*loss_syn(Syn_Ih);
                  grad_syn_b = 2*TF.C2*sum(loss(Syn_Ih)); 
                 end
         else
             grad_syn_w = 0;
             grad_syn_b = 0;
         end
-                
-         %% SGD update                           
+                     
+         %% Adadelta update                           
                % Final gradient
                 %gradw_part = loss(Ih).*miniTLabel(Ih)/nIh;
                 gradw_part = loss(Ih).*miniTLabel(Ih);
                 grad_w = (TF.C*w(1:end-1) - grad_prox_w - grad_syn_w - 2*TF.C1*zKTInst(Ih,:)'*(gradw_part) ) ;
                 grad_b = (TF.C*w(end) - grad_prox_b - grad_syn_b - 2*TF.C1*sum(gradw_part)); 
- 
                 grad_final = [grad_w;grad_b];
-                direct = grad_final;
+    
+                % Adadelta Update
+                E_gg = Opt.ada.delta * E_gg + (1-Opt.ada.delta)*(grad_final.*grad_final);
+                RMS_gg = (E_gg + Opt.ada.e).^(1/2);
+                RMS_xx = (E_xx + Opt.ada.e).^(1/2);
+                direct = -1 * (RMS_xx./RMS_gg) .* grad_final;
+                E_xx = Opt.ada.delta * E_xx + (1-Opt.ada.delta) * direct.*direct;
+                direct = -1*direct;
+                
          %% Step size
                if Opt.N == 0
                   %  (stepsize == 1)
@@ -239,7 +244,7 @@ for round = 1:Set.Epoch
                     %Optional : Armijo condition (for stepsize)
                     if  (grad_final'*grad_final/nDim > 1E-5)
                         if TF.C2>0 
-                            eta = Armijo(zKTInst,miniTLabel,[Syndata_P;Syndata_N],[ones(Syn_l_p,1);-1*ones(Syn_l_n,1)],w,[wp;bp],TF,direct,grad_final);
+                            eta = Armijo(zKTInst,miniTLabel,SynData,SynLabel,w,[wp;bp],TF,direct,grad_final);
                         else
                             eta = Armijo(zKTInst,miniTLabel,0,0,w,[wp;bp],TF,direct,grad_final);
                         end
@@ -256,16 +261,8 @@ for round = 1:Set.Epoch
                elseif Opt.N == 3
                    w = w - eta * direct;
                    Report.eta(round,part) = eta;   
-               end % Stepsize end                           
-               %{
-               % Hypergradient
-               H          = Hyper_grad' * grad_final/(Hyper_grad' * Hyper_grad * grad_final' * grad_final+eps)^(1/2);
-               eta        = eta + Opt.beta * H;
-               Hyper_grad = grad_final;
-               Report.eta(round,part) = eta;
-              % SGD algorithm 
-               w = w - eta.*grad_final; 
-                %}
+               end % Stepsize end                                
+
               
         end %Update Part end
         

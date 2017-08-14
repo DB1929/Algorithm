@@ -15,6 +15,7 @@ function [Model,Report] = RSVM_SGD_PHS_v2(Model,TF,Opt,Set,Inst,Label)
 %            TF.C         : Trade-off with Regularization
 %            TF.C1        : Trade-off with Training  data loss
 %            TF.C2        : Trade-off with Synthetic data loss
+%            TF.C2_1      : Trade-off  in  Synthetic data 
 %            TF.C3        : Trade-off with Proximal Model
 %
 %        (3) Opt          : Parameter of optimization algorithm
@@ -189,7 +190,7 @@ for round = 1:Set.Epoch
                 Syn_l_p   = length(Syn_ind_p);
                 Syn_l_n   = length(Syn_ind_n);
                 % Generate the Synthestic data
-                C4 = 0.2;
+                C4 = TF.C2_1;
                 if Syn_l_p>0 && Syn_l_n>0
                     %Syndata_P = (1-C4)*zKTInst(Syn_ind_p,:)+ones(Syn_l_p,1)*(C4*m_p);
                     %Syndata_N = (1-C4)*zKTInst(Syn_ind_n,:)+ones(Syn_l_n,1)*(C4*m_n);

@@ -18,6 +18,7 @@ function [Result,Model] = Train_all(Filename,Method,TF,Opt,Set,RatiofRS,gamma)
 %            TF.C         : Trade-off with Regularization
 %            TF.C1        : Trade-off with Training  data loss
 %            TF.C2        : Trade-off with Synthetic data loss
+%            TF.C2_1      : Trade-off  in  Synthetic data 
 %            TF.C3        : Trade-off with Proximal Model
 %
 %        (3) Opt          : Parameter of optimization algorithm
