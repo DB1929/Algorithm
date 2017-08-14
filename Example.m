@@ -300,7 +300,7 @@ Kernelprint(Model.RS,Model.RS,gamma);
 
 
 %Data set : w3a - Adadelta
-%{
+%
 filename = 'w3a';
 method = 2;
 %% Set
@@ -319,8 +319,8 @@ TF.C3 = 1;      %Prox
 Opt.eta  = 0.3;      %LearningRate
 Opt.beta = 0.1;         %Hyper 
 Opt.N = 2; 
-Opt.delta = 0.95;
-Opt.e = 1e-6;
+Opt.ada.delta = 0.95;
+Opt.ada.e = 1e-6;
 %gamma = 0.00001;
 gamma = 0.075;
 
@@ -341,7 +341,7 @@ filename = 'svmguide1';
 method = 3;
 %% Set
 Set.Minibatch = 10;   %BatchSize
-Set.Epoch     = 10;   %Epoch
+Set.Epoch     = -10;   %Epoch
 Set.Overlap   = 1 ;   %Overlap
 
 %% Trade-Off
@@ -355,9 +355,9 @@ TF.C3 = 10;      %Prox
 Opt.eta  = 0.001;      %LearningRate
 Opt.beta = 0.1;         %Hyper 
 Opt.N = 2; 
-Opt.d1 = 0.9;
-Opt.d2 = 0.999;
-Opt.e = 1e-8;
+Opt.adam.d1 = 0.9;
+Opt.adam.d2 = 0.999;
+Opt.adam.e = 1e-8;
 %gamma = 0.00001;
 gamma = 1e-3;
 

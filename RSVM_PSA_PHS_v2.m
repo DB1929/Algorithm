@@ -25,7 +25,10 @@ function [Model,Report] = RSVM_PSA_PHS_v2(Model,TF,Opt,Set,Inst,Label)
 %            Opt.psa.alpha: PSA bounded parameter
 %            Opt.psa.beta : PSA bounded parameter
 %            Opt.psa.kai  : PSA bounded parameter
-%            Opt.N        : 0-> Newton step 1->Armijo 2-> Hypergradient 
+%            Opt.N        : Type of Learning rate choose
+%                           0-> Default step 1
+%                           1-> Armijo 
+%                           2-> Hypergradient 
 %                           3-> Fixed eta
 %
 %        (4) Set          : Setting the learning.
@@ -291,9 +294,7 @@ for round = 1:Set.Epoch
                    psa_w1 = w;        
                elseif (mod(psa_t,Opt.psa.b)==0) 
                    psa_w2 = w;
-               end     
-                       
-              
+               end                  
         end %Update Part end
         
         %% Overlapping Strategty

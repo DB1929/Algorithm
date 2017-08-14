@@ -12,8 +12,8 @@ function [Result] = Prediction(Model,VInst,VLabel)
 %            Model.RS     : Reduce set of Kernel
 %            Model.gamma  : Parameter of RBF Kernel.
 %
-%            VInst    : Testing dataset.
-%            VLabel   : Labels of VInst.
+%        (2) VInst         : Testing dataset.
+%        (3) VLabel        : Labels of VInst.
 %
 % Outputs :
 %            Result   : Min, max, standard deviation, average,all testing error rate.
@@ -53,6 +53,7 @@ end
     Result.min_testing_err = min(Result.Testing_error);
     Result.max_testing_err = max(Result.Testing_error);
     Result.avg_testing_err = mean(Result.Testing_error);
+    Result.std_testing_err = std(Result.Testing_error);
     % Model relative
     if ModelNum >1
        ModelRelate =[];
@@ -63,7 +64,7 @@ end
     else
        Result.ModelRelate = []; 
     end
-    Result.std_testing_err = std(Result.Testing_error);
+
 end
 
 

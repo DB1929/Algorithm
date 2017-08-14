@@ -20,7 +20,10 @@ function [Model,Report] = RSVM_SGD_PHS_v2(Model,TF,Opt,Set,Inst,Label)
 %        (3) Opt          : Parameter of optimization algorithm
 %            Opt.eta      : Learning rate
 %            Opt.beta     : Parameter of Hypergradient 
-%            Opt.N        : 0-> Newton step 1->Armijo 2-> Hypergradient 
+%            Opt.N        : Type of Learning rate choose
+%                           0-> Default step 1
+%                           1-> Armijo 
+%                           2-> Hypergradient 
 %                           3-> Fixed eta
 %
 %        (4) Set          : Setting the learning.

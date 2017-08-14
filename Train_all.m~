@@ -110,11 +110,11 @@ elseif Set.Epoch < 0
     Set.Epoch = 1;
     WW = zeros(SizeofRS+1,TrainTimes);
 end
+Model.W = rand(SizeofRS+1,Set.Epoch);
 Model.gamma = gamma;
 
 %% Training
 for tt = 1:TrainTimes
-    Model.W = rand(SizeofRS+1,Set.Epoch);
     if Method == 0
         %[Model,Result.train] = RSVM_SGD_PHS(Model,TF,Opt,Set,TInst,TLabel);
          [Model,Result.train] = RSVM_SGD_PHS_v2(Model,TF,Opt,Set,TInst,TLabel);

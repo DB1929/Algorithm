@@ -20,10 +20,13 @@ function [Model,Report] = RSVM_Adam_PHS_v2(Model,TF,Opt,Set,Inst,Label)
 %        (3) Opt          : Parameter of optimization algorithm
 %            Opt.eta      : Learning rate
 %            Opt.beta     : Parameter of Hypergradient 
-%            Opt.d1       : Decay rate in Adam 
-%            Opt.d2       : Decay rate in Adam 
-%            Opt.e        : Adam parameter in RMS function
-%            Opt.N        : 0-> Newton step 1->Armijo 2-> Hypergradient 
+%            Opt.adam.d1  : Decay rate in Adam 
+%            Opt.adam.d2  : Decay rate in Adam 
+%            Opt.adam.e   : Adam parameter in RMS function
+%            Opt.N        : Type of Learning rate choose
+%                           0-> Default step 1
+%                           1-> Armijo 
+%                           2-> Hypergradient 
 %                           3-> Fixed eta
 %
 %        (4) Set          : Setting the learning.
@@ -237,10 +240,10 @@ for round = 1:Set.Epoch
  
                 grad_final = [grad_w;grad_b];
                 % Adam Update
-                E_g  = Opt.d1 * E_g  + (1-Opt.d1)*grad_final;
-                E_gg = Opt.d2 * E_gg + (1-Opt.d2)*(grad_final.*grad_final);
+                E_g  = Opt.adam.d1 * E_g  + (1-Opt.adam.d1)*grad_final;
+                E_gg = Opt.adam.d2 * E_gg + (1-Opt.adam.d2)*(grad_final.*grad_final);
                 tt = (round-1)*PartNum + part;
-                direct =  (E_g/(1-Opt.d1^tt))./((E_gg/(1-Opt.d2^tt)+Opt.e).^(0.5));
+                direct =  (E_g/(1-Opt.adam.d1^tt))./((E_gg/(1-Opt.adam.d2^tt)+Opt.adam.e).^(0.5));
 
          %% Step size
                if Opt.N == 0

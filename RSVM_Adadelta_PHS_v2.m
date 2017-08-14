@@ -20,9 +20,12 @@ function [Model,Report] = RSVM_Adadelta_PHS_v2(Model,TF,Opt,Set,Inst,Label)
 %        (3) Opt          : Parameter of optimization algorithm
 %            Opt.eta      : Learning rate
 %            Opt.beta     : Parameter of Hypergradient 
-%            Opt.delta    : Decay rate in Adadelta algorithm
-%            Opt.e        : Adadelta parameter in RMS function
-%            Opt.N        : 0-> Newton step 1->Armijo 2-> Hypergradient 
+%            Opt.ada.delta: Decay rate in Adadelta algorithm
+%            Opt.ada.e    : Adadelta parameter in RMS function
+%            Opt.N        : Type of Learning rate choose
+%                           0-> Default step 1
+%                           1-> Armijo 
+%                           2-> Hypergradient 
 %                           3-> Fixed eta
 %
 %        (4) Set          : Setting the learning.
@@ -224,11 +227,11 @@ for round = 1:Set.Epoch
                 grad_final = [grad_w;grad_b];
     
                 % Adadelta Update
-                E_gg = Opt.delta * E_gg + (1-Opt.delta)*(grad_final.*grad_final);
-                RMS_gg = (E_gg + Opt.e).^(1/2);
-                RMS_xx = (E_xx + Opt.e).^(1/2);
+                E_gg = Opt.ada.delta * E_gg + (1-Opt.ada.delta)*(grad_final.*grad_final);
+                RMS_gg = (E_gg + Opt.ada.e).^(1/2);
+                RMS_xx = (E_xx + Opt.ada.e).^(1/2);
                 direct = -1 * (RMS_xx./RMS_gg) .* grad_final;
-                E_xx = Opt.delta * E_xx + (1-Opt.delta) * direct.*direct;
+                E_xx = Opt.ada.delta * E_xx + (1-Opt.ada.delta) * direct.*direct;
                 direct = -1*direct;
                 
          %% Step size
