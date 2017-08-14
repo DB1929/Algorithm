@@ -557,7 +557,7 @@ Kernelprint(Model.RS,Model.RS,gamma);
 
 
 %Data set : svmguide1 -SGDNvM
-%
+%{
 filename = 'svmguide1';
 method = 2;
 %% Set

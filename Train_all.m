@@ -64,7 +64,9 @@ function [Result,Model] = Train_all(Filename,Method,TF,Opt,Set,RatiofRS,gamma)
 load(['dataset/',Filename,'.mat'],'TInst','TLabel');
 load(['dataset/',Filename,'.mat'],'VInst','VLabel');
 [InstNum,~] = size(TInst);
-
+idx = randperm(InstNum);
+TInst = TInst(idx,:);
+TLabel = TLabel(idx);
  
 %% Initial Setting
 %% Reduced set selection
