@@ -568,18 +568,18 @@ Set.Overlap   = 1 ;   %Overlap
 %% Trade-Off
 %C = 5;
 TF.C  = [1,0.1];
-TF.C1 = 100;       %TrainLoss
-TF.C2 = 0.01;      %Syn
+TF.C1 = [100,10,1,0.1];       %TrainLoss
+TF.C2 = 0;      %Syn
 TF.C2_1 = 0.2;
-TF.C3 = 0.01;      %Prox
+TF.C3 = [1,0.1,0.01];      %Prox
 
 %% Opt
-Opt.eta  = 0.0003;      %LearningRate
+Opt.eta  = [0.1,0.01,0.001,0.0001];      %LearningRate
 Opt.beta = 0.0001;         %Hyper 
 Opt.N = 3;
 Opt.Nmmt.mu = 0.9;
 %gamma = 0.00001;
-gamma = 1e-3;
+gamma = 0.001:0.003:0.01;
 
 %Reduce kernel subset size
 SizeoRatiofReducedset = 0.05;
@@ -587,5 +587,5 @@ SizeoRatiofReducedset = 0.05;
 profile on
 [Result,Model] = Train_grid_search(filename,method,TF,Opt,Set,SizeoRatiofReducedset,gamma)
 profile viewer
-Kernelprint(Model.RS,Model.RS,gamma);
+%Kernelprint(Model.RS,Model.RS,gamma);
 %}

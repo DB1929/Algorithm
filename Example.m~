@@ -562,15 +562,16 @@ filename = 'svmguide1';
 method = 2;
 %% Set
 Set.Minibatch = 10;   %BatchSize
-Set.Epoch     = 10;   %Epoch
+Set.Epoch     = 5;   %Epoch
 Set.Overlap   = 1 ;   %Overlap
 
 %% Trade-Off
 %C = 5;
 TF.C  = [1,0.1];
-TF.C1 = 100;       %TrainLoss
-TF.C2 = 0.01;      %Syn
-TF.C3 = 0.01;      %Prox
+TF.C1 = [100,10,1,0.1];       %TrainLoss
+TF.C2 = 0;      %Syn
+TF.C2_1 = 0.2;
+TF.C3 = [1,0.1,0.01];      %Prox
 
 %% Opt
 Opt.eta  = 0.0003;      %LearningRate
