@@ -1,7 +1,8 @@
-function [Model,Report] = RSVM_PSA_PHS_v2(Model,TF,Opt,Set,Inst,Label)
+function [Model,Report] = RSVM_SGDM_PHS_v2(Model,TF,Opt,Set,Inst,Label)
 %% ========================================================================
 % JIAN-PING SYU
-% PSA with (1)Proximal Model (2)Hypergradient (3)Synthetic Data
+% SGD with momentum with 
+%           (1)Proximal Model (2)Hypergradient (3)Synthetic Data
 %           Reduce Kernel Support Vector Machine
 %           ! v2 Renew the Synthetic Data 
 % Read Me ================================================================%
@@ -19,13 +20,12 @@ function [Model,Report] = RSVM_PSA_PHS_v2(Model,TF,Opt,Set,Inst,Label)
 %
 %        (3) Opt          : Parameter of optimization algorithm
 %            Opt.eta      : Learning rate
-%            Opt.beta     : Parameter of Hypergradient
-%            Opt.psa.eta  : Initial of  PSA vector
-%            Opt.psa.b    : Step size of update PSA vector 
-%            Opt.psa.alpha: PSA bounded parameter
-%            Opt.psa.beta : PSA bounded parameter
-%            Opt.psa.kai  : PSA bounded parameter
-%            Opt.N        : 0-> Newton step 1->Armijo 2-> Hypergradient 
+%            Opt.beta     : Parameter of Hypergradient 
+%            Opt.mmt.mu   : Parameter of momentum
+%            Opt.N        : Type of Learning rate choose
+%                           0-> Default step 1
+%                           1-> Armijo 
+%                           2-> Hypergradient 
 %                           3-> Fixed eta
 %
 %        (4) Set          : Setting the learning.
@@ -76,12 +76,6 @@ n_n = 0;
 w       = Model.W(:,1);                      %Initial the weight
 %Model.W = zeros(rs1,Set.Epoch);
 eta     = Opt.eta;
-% PSA initial
-psa_m   = Opt.psa.kai*(Opt.psa.alpha + Opt.psa.beta)/(Opt.psa.alpha - Opt.psa.beta);
-psa_n   = Opt.psa.kai*2*(1-Opt.psa.alpha)/(Opt.psa.alpha - Opt.psa.beta);
-psa_t   = 0;
-psa_eta = Opt.psa.eta*ones(rs1,1);
-psa_w1  = w;
 
 %Report
 Report.time = zeros(Set.Epoch,1);
@@ -233,7 +227,7 @@ for round = 1:Set.Epoch
             grad_syn_b = 0;
         end
                 
-         %% PSA update                           
+         %% SGD with momentum update                           
                % Final gradient
                 %gradw_part = loss(Ih).*miniTLabel(Ih)/nIh;
                 gradw_part = loss(Ih).*miniTLabel(Ih);
@@ -241,8 +235,9 @@ for round = 1:Set.Epoch
                 grad_b = (TF.C*w(end) - grad_prox_b - grad_syn_b - 2*TF.C1*sum(gradw_part)); 
  
                 grad_final = [grad_w;grad_b];
-                direct = psa_eta.*grad_final; %PSA direction
-                
+                % Momentum update
+                mmt_v = Opt.mmt.mu*mmt_v -
+                direct = 
          %% Step size
                if Opt.N == 0
                   %  (stepsize == 1)
@@ -269,29 +264,16 @@ for round = 1:Set.Epoch
                elseif Opt.N == 3
                    w = w - eta * direct;
                    Report.eta(round,part) = eta;   
-               end % Stepsize end
-               
-           %% PSA algorithm
-           %count the psa step
-           psa_t = psa_t + 1;   
-               if(mod(psa_t,2*Opt.psa.b)==0)
-               % (w - w2) / (w2 -w1)
-               % avoid 1 / 0
-                   psa_div   = Opt.psa.kai*ones(rs1,1);
-                   psa_ind   = (psa_w2-psa_w1)~=0;
-                   psa_ind_z = (psa_w2-psa_w1)==0;
-                   psa_div(psa_ind)  = (w(psa_ind)-psa_w2(psa_ind))./(psa_w2(psa_ind)-psa_w1(psa_ind));
-                   psa_div(psa_ind_z)= sign(w(psa_ind_v)-psa_w2(psa_ind_v)).*psa_div(psa_ind_z);
-                   % psa_u
-                   psa_ind_ov= abs(psa_div)>Opt.psa.kai;
-                   psa_div(psa_ind_ov) = Opt.psa.kai*sign(psa_div(psa_ind_ov)); 
-                   % Update psa_eta
-                   psa_eta = psa_eta.* ((psa_m+psa_div)/(psa_m+psa_n+Opt.psa.kai));
-                   psa_w1 = w;        
-               elseif (mod(psa_t,Opt.psa.b)==0)  
-                   psa_w2 = w;
-               end     
-                       
+               end % Stepsize end                           
+               %{
+               % Hypergradient
+               H          = Hyper_grad' * grad_final/(Hyper_grad' * Hyper_grad * grad_final' * grad_final+eps)^(1/2);
+               eta        = eta + Opt.beta * H;
+               Hyper_grad = grad_final;
+               Report.eta(round,part) = eta;
+              % SGD algorithm 
+               w = w - eta.*grad_final; 
+                %}
               
         end %Update Part end
         

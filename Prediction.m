@@ -10,13 +10,17 @@ function [Result] = Prediction(Model,VInst,VLabel)
 %        (1) Model        : Initial of the Model
 %            Model.W      : classifiers (w,b)   (rs1+1 x RoundNum) 
 %            Model.RS     : Reduce set of Kernel
-%            Model.gamma  : Parameter of RBF Kernel.
+%            Model.gamma  : Parameter of RBF Kernel
 %
-%        (2) VInst         : Testing dataset.
-%        (3) VLabel        : Labels of VInst.
+%        (2) VInst        : Testing dataset
+%        (3) VLabel       : Labels of VInst
 %
 % Outputs :
-%            Result   : Min, max, standard deviation, average,all testing error rate.
+%        (1) Result.test   : Result in testing phrase
+%             - Result.test.PVLabel : Prediction of each model in testing data
+%             - Result.test.Testing_error
+%             - Result.test.[min\max\avg\std]_testing_err
+%             - Result.test.ModelRelate : Model relative for each models
 %==========================================================================
 %%
 

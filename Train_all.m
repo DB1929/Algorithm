@@ -6,11 +6,13 @@ function [Result,Model] = Train_all(Filename,Method,TF,Opt,Set,RatiofRS,gamma)
 %        (1) Filename     : The file of Training data & Testing data
 %
 %        (2) Method       : The Opt method.
-%                           0->SGD      : Stochastic Gradient Descent 
-%                           1->SN       : Stochastic Newton Method
-%                           2->Adadelta : Adaptive method
-%                           3->Adam     : Adaptive method
-%                           4->PSA      : Periodic Step-Size Adaptation
+%                           0->SGD      : Stochastic Gradient Descent
+%                           1->SGDM     : SGD with Momentum
+%
+%                           3->SN       : Stochastic Newton Method
+%                           4->Adadelta : Adaptive method
+%                           5->Adam     : Adaptive method
+%                           6->PSA      : Periodic Step-Size Adaptation
 %
 %        (3) TF           : Trade-off in objective function
 %            TF.C         : Trade-off with Regularization
@@ -49,7 +51,7 @@ function [Result,Model] = Train_all(Filename,Method,TF,Opt,Set,RatiofRS,gamma)
 %             - Result.test.PVLabel : Prediction of each model in testing data
 %             - Result.test.Testing_error
 %             - Result.test.[min\max\avg\std]_testing_err
-%             - Result.test.ModelRelate : Model relative for each models.
+%             - Result.test.ModelRelate : Model relative for each models
 %
 %        (2) Model        : Initial of the Model
 %            Model.W      : classifiers (w,b)   (rs1+1 x RoundNum) 
@@ -117,22 +119,31 @@ for tt = 1:TrainTimes
     Model.W = rand(SizeofRS+1,Set.Epoch);
     if Method == 0
         %[Model,Result.train] = RSVM_SGD_PHS(Model,TF,Opt,Set,TInst,TLabel);
-         [Model,Result.train] = RSVM_SGD_PHS_v2(Model,TF,Opt,Set,TInst,TLabel);
-    elseif Method == 1 
+        [Model,Result.train] = RSVM_SGD_PHS_v2(Model,TF,Opt,Set,TInst,TLabel);
+        method = 'SGD';
+    elseif Method == 1
+       %% Opt.mmt
+        % Opt.mmt.mu   : Parameter of momentum
+        [Model,Result.train] = RSVM_SGDM_PHS_v2(Model,TF,Opt,Set,TInst,TLabel);
+        method = 'SGDM';
+    elseif Method == 3 
         %[Model,Result.train] = RSVM_SN_PHS(Model,TF,Opt,Set,TInst,TLabel);
         [Model,Result.train] = RSVM_SN_PHS_v2(Model,TF,Opt,Set,TInst,TLabel);
-    elseif Method == 2
+        method = 'SN';
+    elseif Method == 4
        %% Opt.ada
         % Opt.ada.delta: Decay rate in Adadelta algorithm
         % Opt.ada.e    : Adadelta parameter in RMS function
         [Model,Result.train] = RSVM_Adadelta_PHS_v2(Model,TF,Opt,Set,TInst,TLabel);
-    elseif Method == 3
+        method = 'Adadelta';
+    elseif Method == 5
        %% Opt.adam
         % Opt.adam.d1  : Decay rate in Adam 
         % Opt.adam.d2  : Decay rate in Adam 
         % Opt.adam.e   : Adam parameter in RMS function
-        [Model,Result.train] = RSVM_Adam_PHS_v2(Model,TF,Opt,Set,TInst,TLabel);  
-    elseif Method == 4
+        [Model,Result.train] = RSVM_Adam_PHS_v2(Model,TF,Opt,Set,TInst,TLabel); 
+        method = 'Adam';
+    elseif Method == 6
        %% Opt.psa
         % Opt.psa.eta  : Initial of  PSA vector
         % Opt.psa.b    : Step size of update PSA vector 
@@ -140,6 +151,7 @@ for tt = 1:TrainTimes
         % Opt.psa.beta : PSA bounded parameter
         % Opt.psa.kai  : PSA bounded parameter
         [Model,Result.train] = RSVM_PSA_PHS_v2(Model,TF,Opt,Set,TInst,TLabel);
+        method = 'PSA';
     end
     if TrainTimes > 1
         WW(:,tt) = Model.W; 
