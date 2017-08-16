@@ -10,7 +10,7 @@ function [Result,Model] = Train_grid_search(Filename,Method,TF,Opt,Set,RatiofRS,
 %        (2) Method       : The Opt method.
 %                           0->SGD      : Stochastic Gradient Descent
 %                           1->SGDM     : SGD with Momentum
-%
+%                           2->SGDNvM   : SGD with Nesterov momentum
 %                           3->SN       : Stochastic Newton Method
 %                           4->Adadelta : Adaptive method
 %                           5->Adam     : Adaptive method

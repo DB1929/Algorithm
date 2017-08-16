@@ -90,6 +90,12 @@ else
     Model.RS = [RS_N(1:RS_l,:);RS_P(1:SizeofRS-RS_l,:)];
 end
 
+%% Fix the reduce set
+load('a9aRS');
+Model.RS = a9aRS;
+
+
+
 
 %% Checkerboard RS
 %%
@@ -114,12 +120,14 @@ elseif Set.Epoch < 0
     TrainTimes = abs(Set.Epoch);
     Set.Epoch = 1;
     WW = zeros(SizeofRS+1,TrainTimes);
+    TotalTime = zeros(1,TrainTimes);
 end
 Model.gamma = gamma;
 
 %% Training
 for tt = 1:TrainTimes
-    Model.W = rand(SizeofRS+1,Set.Epoch);
+    %Model.W = 0.01*rand(SizeofRS+1,Set.Epoch);
+    Model.W = zeros(SizeofRS+1,Set.Epoch);
     if Method == 0
         %[Model,Result.train] = RSVM_SGD_PHS(Model,TF,Opt,Set,TInst,TLabel);
         [Model,Result.train] = RSVM_SGD_PHS_v2(Model,TF,Opt,Set,TInst,TLabel);
@@ -161,12 +169,17 @@ for tt = 1:TrainTimes
         [Model,Result.train] = RSVM_PSA_PHS_v2(Model,TF,Opt,Set,TInst,TLabel);
         method = 'PSA';
     end
+
     if TrainTimes > 1
-        WW(:,tt) = Model.W; 
+        TotalTime(1,tt) = Result.train.time;
+        WW(:,tt) = Model.W;        
         if tt == TrainTimes
             Model.W = WW;
+            Result.train.time = TotalTime;
         end
     end
 end
 %% Testing
 [Result.test] = Prediction(Model,VInst,VLabel);
+%% Print Kernel
+Kernelprint([VInst(VLabel<0,:);VInst(VLabel>0,:)],Model.RS,gamma);

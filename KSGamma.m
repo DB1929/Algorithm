@@ -29,7 +29,7 @@ else
 end
 
 
-Kernelprint([VInst(VLabel<0,:);VInst(VLabel>0,:)],Model.RS,gamma);
+%Kernelprint([VInst(VLabel<0,:);VInst(VLabel>0,:)],Model.RS,gamma);
 %Kernelprint([TInst(TLabel<0,:);TInst(TLabel>0,:)],Model.RS,gamma);
 
 end
