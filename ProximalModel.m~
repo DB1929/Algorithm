@@ -28,20 +28,6 @@ classdef ProximalModel
     end
     
     methods
-        function obj = ProximalModel(C)
-            obj.E_p  = 0;
-            obj.E_pp = 0;
-            obj.E_n  = 0;
-            obj.E_nn = 0;
-            obj.n_p  = 0;
-            obj.n_n  = 0;           
-            obj.wp   = 0;
-            obj.bp   = 0;
-            obj.grad_wp = 0;
-            obj.grad_bp = 0;
-            obj.C  = C;                  
-        end
-        
         
         function obj = StatInfo(obj,Inst,Label)
             ind_p = find(Label>0);
@@ -72,7 +58,17 @@ classdef ProximalModel
             obj.grad_wp = obj.C * obj.wp;
             obj.grad_bp = obj.C * obj.bp;       
         end
-
+        
+        function obj = PROXIMALMODEL(obj,Inst,Label)
+            obj = StatInfo(obj,Inst,Label);
+            if obj.n_p >1 && obj.n_n >1
+                obj = Prox(obj);
+                obj = Grad_prox(obj);
+            else
+            end
+            
+        end
+        
         
         
     end

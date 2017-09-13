@@ -122,7 +122,8 @@ Model.gamma = gamma;
 for tt = 1:TrainTimes
     %Model.W = 0.01*rand(SizeofRS+1,Set.Epoch);
     Model.W = zeros(SizeofRS+1,Set.Epoch);
-    [Model,Result.train] = RSVM_YFin_PHS_v3(Model,TF,Opt,Set,TInst,TLabel);
+    %[Model,Result.train] = RSVM_YFin_PHS_v3(Model,TF,Opt,Set,TInst,TLabel);
+    [Model,Result.train] = RSVM_YFin_Prox_v4(Model,TF,Opt,Set,TInst,TLabel);
     method = 'YellowFin';
     if TrainTimes > 1
         TotalTime(1,tt) = Result.train.time;

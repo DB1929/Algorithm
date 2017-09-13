@@ -3,26 +3,26 @@ clear all
 
 
 %
-filename = 'a9a';
+filename = 'svmguide1';
 %
-method = 6;
+method = 0;
 %% Set
-Set.Minibatch = 100;   %BatchSize
-Set.Epoch     = 5;   %Epoch
+Set.Minibatch = 1;   %BatchSize
+Set.Epoch     = -30;   %Epoch
 Set.Overlap   = 1 ;   %Overlap
 
 %% Trade-Off
 %C = 5;
-TF.C  = 0.1;
-TF.C1 = 1000;       %TrainLoss
+TF.C  = 0.01;
+TF.C1 = 100;       %TrainLoss
 TF.C2 = 0;      %Syn
 TF.C2_1 = 0.2;
 TF.C3 = 0;      %Prox
 
 %% Opt
-Opt.eta  = 0.01;      %LearningRate
-Opt.beta = 0.01;         %Hyper 
-Opt.N = 2; 
+Opt.eta  = 0.0001;      %LearningRate
+Opt.beta = 0.0001;         %Hyper 
+Opt.N = 3; 
 %% Momentum
 Opt.mmt.mu = 0.9;
 %% Nesterov
@@ -42,9 +42,9 @@ Opt.psa.beta = 0.99;
 Opt.psa.kai  = 0.9;
 %gamma = 0.00001;
 %gamma = 45;
-gamma = 0.09;
+gamma = 0.000625;
 %Reduce kernel subset size
-SizeoRatiofReducedset = 0.005;
+SizeoRatiofReducedset = 0.1;
 
 %profile on
 [Result,Model] = Train_all(filename,method,TF,Opt,Set,SizeoRatiofReducedset,gamma)

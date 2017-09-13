@@ -8,7 +8,7 @@ function [Result,Model] = Train_all(Filename,Method,TF,Opt,Set,RatiofRS,gamma)
 %        (2) Method       : The Opt method.
 %                           0->SGD      : Stochastic Gradient Descent
 %                           1->SGDM     : SGD with Momentum
-%
+%                           2->SGDNvM   : SGD with Nesterov momentum
 %                           3->SN       : Stochastic Newton Method
 %                           4->Adadelta : Adaptive method
 %                           5->Adam     : Adaptive method
@@ -91,10 +91,13 @@ else
 end
 
 %% Fix the reduce set
-load('a9aRS');
-Model.RS = a9aRS;
+%% a9aRS
+%load('a9aRS');
+%Model.RS = a9aRS;
 
-
+%% svmguide1RS
+load('svmguide1RS');
+Model.RS = svmguide1RS;
 
 
 %% Checkerboard RS
@@ -106,7 +109,7 @@ rs = -2:0.5:2;
 rs2 = rs'*ones(1,length(rs));
 rs=rs';
 Model.RS = [rs2(1,:)',rs; rs2(2,:)',rs;rs2(3,:)',rs;rs2(4,:)',rs;rs2(5,:)',rs;rs2(6,:)',rs;rs2(7,:)',rs;rs2(8,:)',rs;rs2(9,:)',rs];
-SizeofReducedset = length(Model.RS);
+SizeofRS = length(Model.RS);
 %}
 
 

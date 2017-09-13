@@ -245,8 +245,8 @@ for round = 1:Set.Epoch
                 else
                    %Q = [zKTInst(Ih,:)*(TF.C1/nIh),ones(nIh,1)*(TF.C1/nIh)];
                    %Nt_direct = grad_final/TF.C - 2*(1/(TF.C))*Q'*((eye(nIh)+2*Q*Q')\(Q*grad_final));
-                   Q = [zKTInst(Ih,:)*(TF.C1),ones(nIh,1)*(TF.C1)];                    
-                   Nt_direct = grad_final/TF.C - 2*(1/(TF.C))*Q'*((eye(nIh)+2*Q*Q')\(Q*grad_final));
+                   Q = [zKTInst(Ih,:),ones(nIh,1)];                    
+                   Nt_direct = grad_final/TF.C - 2*TF.C1*(1/(TF.C))*Q'*((eye(nIh)+2*TF.C1*Q*Q')\(Q*grad_final));
                 end
                %% Step size
                if Opt.N == 0
