@@ -83,9 +83,7 @@ for round = 1:Set.Epoch
     TLabel = Label(ind,:);
     
     % Initial Setting before every epoch
-    if round == 1
-       Hyper_grad = zeros(rs1,1);
-    else
+    if round > 1
        w = Model.W(:,round-1); 
     end
     ind_end = 0;    
@@ -136,12 +134,10 @@ for round = 1:Set.Epoch
             if round==1
         %% Proximal model
                 if Prox.n_p>1 && Prox.n_n>1                   
-                    Prox = Prox(Prox);
+                    Prox = getProx(Prox);
                     Prox = Grad_prox(Prox);
                 end
             end
-            
-      
                 
          %% Gradient                        
                % Final gradient
@@ -150,9 +146,7 @@ for round = 1:Set.Epoch
                 grad_w = (TF.C*w(1:end-1) - Prox.grad_wp - 2*TF.C1*zKTInst(Ih,:)'*(gradw_part) ) ;
                 grad_b = (TF.C*w(end) - Prox.grad_bp - 2*TF.C1*sum(gradw_part)); 
  
-                grad_final = [grad_w;grad_b];
-               
-                
+                grad_final = [grad_w;grad_b];               
      %% YellowFin Optimizer
             YFin = YELLOWFIN(YFin,grad_final);     
             ww = w - YFin.l_r * grad_final + YFin.mu*(w-w_pre);
@@ -187,7 +181,7 @@ for round = 1:Set.Epoch
     Report.time(round,1) = elapsedtime;
     Model.W(:,round) = w;
 end % end of a sigle epoch
-        
+  Model.wp = [Prox.wp ; Prox.bp];      
         
 end % end of function
 

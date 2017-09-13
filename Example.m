@@ -589,3 +589,40 @@ profile on
 profile viewer
 %Kernelprint(Model.RS,Model.RS,gamma);
 %}
+
+
+
+%Data set : svmguide1 -YellowFin
+%
+Filename = 'svmguide1';
+
+%% Set
+Set.Minibatch = 100;   %BatchSize
+Set.Epoch     = 5;   %Epoch
+Set.Overlap   = 1 ;   %Overlap
+
+%% Trade-Off
+%C = 5;
+TF.C  = 0.01;
+TF.C1 = 1;       %TrainLoss
+TF.C3 = 0.01;      %Prox
+
+%% Opt
+ Opt.yf.beta  = 0.01;
+ Opt.yf.width = 30;
+ Opt.yf.l_r = 1;
+ gamma = 0.000625;
+
+
+%Reduce kernel subset size
+RatiofRS = 0.1;
+
+profile on
+[Result,Model] = Train_YellowFin(Filename,TF,Opt,Set,RatiofRS,gamma);
+profile viewer
+Result.train
+Result.test
+
+plot(reshape(Result.train.eta,1,size(Result.train.eta,1)*size(Result.train.eta,2)))
+%Kernelprint(Model.RS,Model.RS,gamma);
+%}

@@ -135,6 +135,6 @@ for tt = 1:TrainTimes
     end
 end
 %% Testing
-[Result.test] = Prediction(Model,VInst,VLabel);
+[Result.test] = Prediction_v2(Model,VInst,VLabel);
 %% Print Kernel
 Kernelprint([VInst(VLabel<0,:);VInst(VLabel>0,:)],Model.RS,gamma);
