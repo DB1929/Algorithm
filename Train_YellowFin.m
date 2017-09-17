@@ -75,12 +75,13 @@ end
 
 %% Fix the reduce set
 %% a9a RS
-%load('a9aRS');
-%Model.RS = a9aRS;
-
+%{
+load('a9aRS');
+Model.RS = a9aRS;
+%}
 
 %% svmguide1 RS
-%
+%{
 load('svmguide1RS');
 Model.RS = svmguide1RS;
 %}
@@ -136,5 +137,6 @@ for tt = 1:TrainTimes
 end
 %% Testing
 [Result.test] = Prediction_v2(Model,VInst,VLabel);
+[Result.train2] = Prediction_v2(Model,TInst,TLabel);
 %% Print Kernel
-Kernelprint([VInst(VLabel<0,:);VInst(VLabel>0,:)],Model.RS,gamma);
+%Kernelprint([VInst(VLabel<0,:);VInst(VLabel>0,:)],Model.RS,gamma);

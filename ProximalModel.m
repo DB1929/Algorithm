@@ -61,8 +61,8 @@ classdef ProximalModel
             m_p = obj.E_p/obj.n_p;
             m_n = obj.E_n/obj.n_n;
             % Variance
-            v_p = (obj.E_pp - (obj.E_n.^2)*obj.n_p)/(obj.n_p-1);
-            v_n = (obj.E_nn - (obj.E_n.^2)*obj.n_n)/(obj.n_n-1);
+            v_p = (obj.E_pp - (m_p.^2)*obj.n_p)/(obj.n_p-1);
+            v_n = (obj.E_nn - (m_n.^2)*obj.n_n)/(obj.n_n-1);
             %Proximal Model
             obj.wp = ((m_p - m_n)./(v_p + v_n + eps))';
             obj.bp = (-1/2)*(m_p + m_n)*obj.wp;

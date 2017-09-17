@@ -1,7 +1,7 @@
-function [Model,Report] = RSVM_YFin_Prox_v4(Model,TF,Opt,Set,Inst,Label)
+function [Model,Report] = RSVM_SGD_Prox_v4(Model,TF,Opt,Set,Inst,Label)
 %% ========================================================================
 % JIAN-PING SYU
-% YellowFin with (1)Proximal Model
+% SGD with (1)Proximal Model
 %           Reduce Kernel Support Vector Machine
 %  ! Renew the Proximal Model
 % Read Me ================================================================%
@@ -17,9 +17,12 @@ function [Model,Report] = RSVM_YFin_Prox_v4(Model,TF,Opt,Set,Inst,Label)
 %            TF.C3        : Trade-off with Proximal Model
 %
 %        (3) Opt          : Parameter of optimization algorithm
-%            Opt.yf.beta  : Decay rate of YellowFin
-%            Opt.yf.width : Width of sliding window of YellowFin
-%            Opt.yf.l_r   : Initial of learning rate
+%            Opt.eta      : Learning rate
+%            Opt.beta     : Parameter of Hypergradient 
+%            Opt.N        : Type of Learning rate choose
+%                           0-> Hypergradient 
+%                           1-> Fixed eta
+%
 %
 %        (4) Set          : Setting the learning.
 %            Set.Minibatch: Training data size in every iteration
@@ -65,10 +68,9 @@ Prox = ProximalModel(TF.C3);
 
 %Model
 w       = Model.W(:,1);                      %Initial the weight
-w_pre   = w;
 %Model.W = zeros(rs1,Set.Epoch);
-% YellowFin Inital
-YFin = YellowFin(Opt.yf.beta,Opt.yf.width,Opt.yf.l_r);
+eta     = Opt.eta;
+
 %Report
 Report.time = zeros(Set.Epoch,1);
 Report.loss = zeros(Set.Epoch,PartNum);
@@ -85,6 +87,8 @@ for round = 1:Set.Epoch
     % Initial Setting before every epoch
     if round > 1
        w = Model.W(:,round-1); 
+    elseif round ==1
+       Hyper_grad = zeros(rs1,1);
     end
     ind_end = 0;    
     %Overlapping setting
@@ -152,13 +156,19 @@ for round = 1:Set.Epoch
                 grad_b = (TF.C*w(end) - Prox.grad_bp - 2*TF.C1*sum(gradw_part)); 
  
                 grad_final = [grad_w;grad_b];               
-     %% YellowFin Optimizer
-            YFin = YELLOWFIN(YFin,grad_final);     
-            ww = w - YFin.l_r * grad_final + YFin.mu*(w-w_pre);
-            w_pre = w;
-            w = ww;
-            %Report.eta(round,part) = YFin.l_r;
-            Report.eta(round,part) =  YFin.mu;
+                direct = grad_final;
+         %% Step size
+               if Opt.N == 0
+                   % Hypergradient
+                   H          = Hyper_grad' * grad_final/(Hyper_grad' * Hyper_grad * grad_final' * grad_final+eps)^(1/2);
+                   eta        = eta + Opt.beta * H;
+                   Hyper_grad = direct;
+                   Report.eta(round,part) = eta;                   
+                   w = w - eta.* direct; 
+               elseif Opt.N == 1
+                   w = w - eta * direct;
+                   Report.eta(round,part) = eta;   
+               end 
         
         %% Overlapping Strategty
         if  part>1 && Set.Overlap > 1
